@@ -3,8 +3,10 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+
 #include "object.h"
 #include "weapon.h"
+#include "struct.h"
 
 enum eAction
 {
