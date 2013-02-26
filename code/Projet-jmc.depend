@@ -47,7 +47,7 @@
 	<stdlib.h>
 	"modules/main_char.h"
 
-1361902152 c:\users\freohr\documents\github\projet-jmc\code\modules\main_char.h
+1361904923 c:\users\freohr\documents\github\projet-jmc\code\modules\main_char.h
 	<stdio.h>
 	<stdlib.h>
 	"object.h"
@@ -59,7 +59,7 @@
 	<stdlib.h>
 	"struct.h"
 
-1361891265 c:\users\freohr\documents\github\projet-jmc\code\modules\struct.h
+1361905092 c:\users\freohr\documents\github\projet-jmc\code\modules\struct.h
 	<stdlib.h>
 	<stdio.h>
 
@@ -73,11 +73,12 @@
 1361898444 source:c:\users\freohr\documents\github\projet-jmc\code\modules\ennemy.c
 	"ennemy.h"
 
-1361899224 c:\users\freohr\documents\github\projet-jmc\code\modules\ennemy.h
+1361905092 c:\users\freohr\documents\github\projet-jmc\code\modules\ennemy.h
 	<stdlib.h>
 	<stdio.h>
 	"object.h"
 	"weapon.h"
+	"struct.h"
 
 1361899224 source:c:\users\freohr\documents\github\projet-jmc\code\modules\main_char.c
 	"main_char.h"

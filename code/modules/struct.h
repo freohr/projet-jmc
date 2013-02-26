@@ -18,7 +18,7 @@ enum eState
     jump=3,
     normal=4
 };
-typedef eState state;
+typedef enum eState state;
 
 
 #endif

@@ -15,7 +15,7 @@ enum eAction
     movement=3,
     wait=4
 };
-typedef eAction action;
+typedef enum eAction action;
 
 struct sEnnemy
 {
