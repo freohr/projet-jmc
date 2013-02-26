@@ -11,5 +11,14 @@ struct sCoordinate
 };
 typedef struct sCoordinate coordinate;
 
+enum eState
+{
+    crouch=1,
+    hit=2,
+    jump=3,
+    normal=4
+};
+typedef enum eState state;
+
 
 #endif

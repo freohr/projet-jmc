@@ -1,8 +1,10 @@
 #include "object.h"
 
 // Initialisation and Destruction
-void init_object(object* obj1)
+object* init_object()
 {
+    object* obj1;
+    obj1=malloc(sizeof(object));
     obj1->ID = 0;
     obj1->position.x = 1;
     obj1->position.y = 1;
@@ -10,6 +12,7 @@ void init_object(object* obj1)
     obj1->speed.y = 0;
     obj1->hitbox.x = 1;
     obj1->hitbox.y = 1;
+    return obj1;
 }
 
 void free_object(object* obj1)
