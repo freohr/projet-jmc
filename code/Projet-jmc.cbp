@@ -8,8 +8,8 @@
 		<Option virtualFolders="modules\;" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin\Debug\Projet-jmc" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj\Debug\" />
+				<Option output="bin/Debug/Projet-jmc" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -17,8 +17,8 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin\Release\Projet-jmc" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj\Release\" />
+				<Option output="bin/Release/Projet-jmc" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -31,35 +31,44 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="C:/Program Files (x86)/CodeBlocks/SDL-1.2.15/include" />
 		</Compiler>
+		<Linker>
+			<Add library="bin\Debug\SDL.dll" />
+		</Linker>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="modules\display.c">
+		<Unit filename="modules/display.c">
 			<Option compilerVar="CC" />
 		</Unit>
+<<<<<<< HEAD
 		<Unit filename="modules\display.h" />
 		<Unit filename="modules\engine.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="modules\engine.h" />
 		<Unit filename="modules\ennemy.c">
+=======
+		<Unit filename="modules/display.h" />
+		<Unit filename="modules/ennemy.c">
+>>>>>>> ce3415f67f35311cd9a6ba171ceaba92fea00b2e
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="modules\ennemy.h" />
-		<Unit filename="modules\main_char.c">
+		<Unit filename="modules/ennemy.h" />
+		<Unit filename="modules/main_char.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="modules\main_char.h" />
-		<Unit filename="modules\object.c">
+		<Unit filename="modules/main_char.h" />
+		<Unit filename="modules/object.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="modules\object.h" />
-		<Unit filename="modules\struct.h" />
-		<Unit filename="modules\weapon.c">
+		<Unit filename="modules/object.h" />
+		<Unit filename="modules/struct.h" />
+		<Unit filename="modules/weapon.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="modules\weapon.h" />
+		<Unit filename="modules/weapon.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
