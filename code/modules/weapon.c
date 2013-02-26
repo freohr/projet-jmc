@@ -19,3 +19,4 @@ void free_weapon(weapon * weap) // libération weapon
     weap->hit_number=0;
     free(weap);
 }
+
