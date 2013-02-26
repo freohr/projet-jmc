@@ -5,6 +5,8 @@
 #include<stdlib.h>
 #include "object.h"
 #include "weapon.h"
+#include "struct.h"
+
 
 struct sCharacter
 {
@@ -22,17 +24,17 @@ void init_mainChar(character* char1);
 void free_mainChar(character* char1);
 
 //Get Functions
-object get_cdisposition (character cha);
+object get_cdisposition (character * cha);
         // necessite
         coordinate get_cPosition(const character* char1);
         coordinate get_cSpeed(const character* char1);
         coordinate get_cHitbox(const character* char1);
         int get_cHP(const character* char1);
-int get_chp (character cha);
-int get_clife (character cha );
-weapon get_cgear (character cha)
-int get_cgrenades (character cha);
-int get_cstate (character cha);
+int get_chp (character * cha);
+int get_clife (character * cha );
+weapon get_cgear (character * cha);
+int get_cgrenades (character * cha);
+int get_cstate (character * cha);
 
 
 //Set Functions

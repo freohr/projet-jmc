@@ -4,12 +4,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-struct sCoordinate
-{
-    int x;
-    int y;
-};
-typedef struct sCoordinate coordinate;
+#include "struct.h"
 
 struct sObject
 {
@@ -29,10 +24,10 @@ void free_object(object* obj1);
 // Get Functions
 // TODO : rajouter sprite et direction
 
-int get_oID(object obj1);
-coordinate get_oPosition(object obj1);
-coordinate get_oSpeed(object obj1);
-coordinate get_oHitbox(object obj1);
+int get_oID(const object* obj1);
+coordinate get_oPosition(const object* obj1);
+coordinate get_oSpeed(const object* obj1);
+coordinate get_oHitbox(const object* obj1);
 
 // Set Functions
 // TODO : rajouter sprite et direction

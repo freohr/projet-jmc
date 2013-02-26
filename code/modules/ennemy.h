@@ -26,12 +26,12 @@ void init_ennemy (ennemy * enm);
 void free_ennemy (ennemy * enm);
 
 // Les fonctions en Get 
-object get_edisposition (ennemy enm);
-int get_ehp (ennemy enm);
-weapon get_egear (ennemy enm);
-int get_egrenades (ennemy enm);
-int get_estate (ennemy enm);
-int get_eaction (ennemy enm);
+object get_edisposition (ennemy * enm);
+int get_ehp (ennemy * enm);
+weapon get_egear (ennemy * enm);
+int get_egrenades (ennemy * enm);
+int get_estate (ennemy * enm);
+int get_eaction (ennemy * enm);
 
 // Les fonctions en Set 
 void set_edisposition (ennemy * enm,object disposition);

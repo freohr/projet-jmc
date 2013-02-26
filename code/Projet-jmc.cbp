@@ -47,6 +47,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="modules\object.h" />
+		<Unit filename="modules\weapon.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="modules\weapon.h" />
 		<Extensions>
 			<code_completion />
