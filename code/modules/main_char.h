@@ -7,7 +7,6 @@
 #include "weapon.h"
 #include "struct.h"
 
-
 struct sCharacter
 {
     object disposition;
@@ -15,7 +14,8 @@ struct sCharacter
     int alive;
     // weapon* gear; //A décommenter une fois le module weapons.c écrit
     // int grenades
-    enum state {crouch=1, hit=2, jump=3, normal=4};
+    state pose;
+
 };
 typedef struct sCharacter character;
 
