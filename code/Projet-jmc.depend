@@ -42,3 +42,46 @@
 
 1361897863 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\display.c
 
+1361873210 source:c:\users\freohr\documents\github\projet-jmc\code\main.c
+	<stdio.h>
+	<stdlib.h>
+	"modules/main_char.h"
+
+1361902152 c:\users\freohr\documents\github\projet-jmc\code\modules\main_char.h
+	<stdio.h>
+	<stdlib.h>
+	"object.h"
+	"weapon.h"
+	"struct.h"
+
+1361892477 c:\users\freohr\documents\github\projet-jmc\code\modules\object.h
+	<stdio.h>
+	<stdlib.h>
+	"struct.h"
+
+1361891265 c:\users\freohr\documents\github\projet-jmc\code\modules\struct.h
+	<stdlib.h>
+	<stdio.h>
+
+1361899224 c:\users\freohr\documents\github\projet-jmc\code\modules\weapon.h
+
+1361896270 source:c:\users\freohr\documents\github\projet-jmc\code\modules\display.c
+
+1361892399 source:c:\users\freohr\documents\github\projet-jmc\code\modules\object.c
+	"object.h"
+
+1361898444 source:c:\users\freohr\documents\github\projet-jmc\code\modules\ennemy.c
+	"ennemy.h"
+
+1361899224 c:\users\freohr\documents\github\projet-jmc\code\modules\ennemy.h
+	<stdlib.h>
+	<stdio.h>
+	"object.h"
+	"weapon.h"
+
+1361899224 source:c:\users\freohr\documents\github\projet-jmc\code\modules\main_char.c
+	"main_char.h"
+
+1361901820 source:c:\users\freohr\documents\github\projet-jmc\code\modules\weapon.c
+	"weapon.h"
+
