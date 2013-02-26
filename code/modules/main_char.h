@@ -20,7 +20,7 @@ struct sCharacter
 typedef struct sCharacter character;
 
 // Initialisation and Destruction
-void init_mainChar(character* char1);
+character * init_mainChar();
 void free_mainChar(character* char1);
 
 //Get Functions (récupere les informations

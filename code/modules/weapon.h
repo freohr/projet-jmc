@@ -11,6 +11,6 @@ struct sWeapon
 typedef struct sWeapon weapon;
 
 //fonction pour initialiser et libérer
-void init_weapon(weapon * weap);
+weapon * init_weapon(); //creer un weapon
 void free_weapon(weapon * weap);
 #endif // WEAPON_H_INCLUDED

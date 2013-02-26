@@ -43,42 +43,27 @@ void set_cstate (character * cha,state state1) // modifier l'état du personnage
     cha->pose=state1;
 }
 
-/*struct sCharacter
+character* init_mainChar()//  initialisation et libération, ATTENTION IL N'Y A PAS DE MALLOC!
 {
-    object disposition;
-    int hp;
-    int alive;
-    // weapon* gear; //A décommenter une fois le module weapons.c écrit
-    // int grenades
-    state pose;
+    character * char1;
+    char1=malloc(sizeof(character));
+    set_oPosition(&(char1->disposition), 0, 0); // initialise la position du personnage a x=0, y=0
+    set_oSpeed(&(char1->disposition), 0, 0); // initialise la rapidité du personnage a x=0, y=0 (vitesse nulle)
+    set_oHitbox(&(char1->disposition), 20, 40); // itinialise la hit box
+    set_chp(char1,100);
+    set_clife(char1,1); // modifier l'etat mort ou vivant 0 mort, 1 vivant
+    set_cstate(char1,normal);
+    return char1;
+}
 
-struct sObject
-{
-    int ID;
-    coordinate position;
-    coordinate speed;
-    coordinate hitbox;
-};
-typedef struct sObject object;
-
-};
-typedef struct sCharacter character;
-
-void set_oPosition(object* obj1, int x, int y);
-void set_oSpeed(object* obj1, int x, int y);
-void set_oHitbox(object* obj1, int x, int y);
-*/
-//  initialisation et libération
-
-void init_mainChar(character* char1)
+//void free_mainChar(character* char1)
+void free_mainChar(character * char1) // libere le main !
 {
     set_oPosition(&(char1->disposition), 0, 0); // initialise la position du personnage a x=0, y=0
     set_oSpeed(&(char1->disposition), 0, 0); // initialise la rapidité du personnage a x=0, y=0 (vitesse nulle)
     set_oHitbox(&(char1->disposition), 20, 40); // itinialise la hit box
-    set_chp (&cha,100);
-    set_clife (&cha,1); // modifier l'etat mort ou vivant 0 mort, 1 vivant
-    set_cstate (&cha,normal);
+    set_chp(char1,100);
+    set_clife(char1,1); // modifier l'etat mort ou vivant 0 mort, 1 vivant
+    set_cstate(char1,normal);
+    free(&char1);
 }
-
-//void free_mainChar(character* char1)
-

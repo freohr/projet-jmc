@@ -17,7 +17,7 @@ typedef struct sObject object;
 
 //Initialising Objects
 
-void init_object(object* obj1);
+object* init_object();
 
 void free_object(object* obj1);
 

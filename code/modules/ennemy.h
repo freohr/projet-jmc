@@ -34,7 +34,7 @@ typedef struct sEnnemy ennemy;
 
 // Fonctions
 
-void init_ennemy (ennemy * enm);
+ennemy * init_ennemy ();
 void free_ennemy (ennemy * enm);
 
 // Les fonctions en Get 
