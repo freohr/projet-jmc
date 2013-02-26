@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1361873210 source:c:\users\freohr\documents\github\projet-jmc\code\main.c
+	<stdio.h>
+	<stdlib.h>
+	"modules/main_char.h"
+
+1361873210 c:\users\freohr\documents\github\projet-jmc\code\modules\main_char.h
+	<stdio.h>
+	<stdlib.h>
+	"object.h"
+
+1361891272 c:\users\freohr\documents\github\projet-jmc\code\modules\object.h
+	<stdio.h>
+	<stdlib.h>
+	"struct.h"
+
+1361891265 c:\users\freohr\documents\github\projet-jmc\code\modules\struct.h
+	<stdlib.h>
+	<stdio.h>
+

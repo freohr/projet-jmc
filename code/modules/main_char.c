@@ -1,3 +1,5 @@
+#include "struct.h"
+
 //Get Functions
 
 coordinate get_cPosition(const character* char1)
