@@ -1,7 +1,7 @@
-#IFNDEF _OBJECT_
-#DEFINE _OBJECT_
+#ifndef _OBJECT_
+#define _OBJECT_
 
-#include<sdtio.h>
+#include<stdio.h>
 #include<stdlib.h>
 
 struct sCoordinate
@@ -42,4 +42,4 @@ void set_oPosition(object* obj1, int x, int y);
 void set_oSpeed(object* obj1, int x, int y);
 void set_oHitbox(object* obj1, int x, int y);
 
-#ENDIF
+#endif

@@ -1,3 +1,6 @@
+#include "main_char.h"
+
+
 //Get Functions
 
 coordinate get_cPosition(const character* char1)
@@ -24,3 +27,4 @@ int get_cAlive(const character* char1)
 {
     return char1->alive
 }
+
