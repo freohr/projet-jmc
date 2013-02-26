@@ -39,6 +39,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="modules\display.h" />
+		<Unit filename="modules\engine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules\engine.h" />
 		<Unit filename="modules\ennemy.c">
 			<Option compilerVar="CC" />
 		</Unit>
