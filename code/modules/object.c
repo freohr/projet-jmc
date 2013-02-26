@@ -1,3 +1,5 @@
+#include "object.h"
+
 // Initialisation and Destruction
 void init_object(object* obj1)
 {
@@ -25,22 +27,22 @@ void free_object(object* obj1)
 
 // Get Functions
 
-int get_oID(object obj1)
+int get_oID(const object* obj1)
 {
     return obj1->ID;
 }
 
-coordinate get_oPosition(object obj1)
+coordinate get_oPosition(const object* obj1)
 {
     return obj1->position;
 }
 
-coordinate get_oSpeed(object obj1)
+coordinate get_oSpeed(const object* obj1)
 {
     return obj1->speed;
 }
 
-coordinate get_oHitbox(object obj1)
+coordinate get_oHitbox(const object* obj1)
 {
     return obj1->hitbox;
 }
