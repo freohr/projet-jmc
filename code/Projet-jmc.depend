@@ -4,12 +4,13 @@
 	<stdlib.h>
 	"modules/main_char.h"
 
-1361873210 c:\users\freohr\documents\github\projet-jmc\code\modules\main_char.h
+1361892288 c:\users\freohr\documents\github\projet-jmc\code\modules\main_char.h
 	<stdio.h>
 	<stdlib.h>
 	"object.h"
+	"struct.h"
 
-1361891272 c:\users\freohr\documents\github\projet-jmc\code\modules\object.h
+1361892477 c:\users\freohr\documents\github\projet-jmc\code\modules\object.h
 	<stdio.h>
 	<stdlib.h>
 	"struct.h"
@@ -17,4 +18,7 @@
 1361891265 c:\users\freohr\documents\github\projet-jmc\code\modules\struct.h
 	<stdlib.h>
 	<stdio.h>
+
+1361892303 source:c:\users\freohr\documents\github\projet-jmc\code\modules\main_char.c
+	"main_char.h"
 

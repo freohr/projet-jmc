@@ -2,6 +2,7 @@
 #include<stdlib.h>
 
 #include "object.h"
+#include "struct.h"
 
 struct sCharacter
 {
