@@ -45,7 +45,7 @@ void set_chp (character * cha,int hp); // modifie les points de vie du personnag
 void set_clife (character * cha,int life); // modifier l'etat mort ou vivant
 void set_cgear (character * cha,weapon gear); // modifier le tableau d'arme
 void set_cgrenades (character * cha,int nb_grenades); //modifier le nombre de grenade
-void set_cstate (character * cha,int state); // modifier l'état du personnage
+void set_cstate (character * cha,state state1); // modifier l'état du personnage
 
 // other
 void cmove (character * cha,int speed,int angle); // déplace le personnage; appelle getposition get speed setposition
