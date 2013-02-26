@@ -18,3 +18,28 @@
 	<stdlib.h>
 	<stdio.h>
 
+1361893590 source:c:\users\leo\documents\github\projet-jmc\code\main.c
+	<stdio.h>
+	<stdlib.h>
+	"modules/main_char.h"
+
+1361894313 c:\users\leo\documents\github\projet-jmc\code\modules\main_char.h
+	<stdio.h>
+	<stdlib.h>
+	"object.h"
+	"struct.h"
+
+1361894363 c:\users\leo\documents\github\projet-jmc\code\modules\object.h
+	<stdio.h>
+	<stdlib.h>
+	"struct.h"
+
+1361893590 c:\users\leo\documents\github\projet-jmc\code\modules\struct.h
+	<stdlib.h>
+	<stdio.h>
+
+1361892648 source:c:\users\leo\documents\github\projet-jmc\code\modules\display.c
+
+1361894327 source:c:\users\leo\documents\github\projet-jmc\code\modules\main_char.c
+	"main_char.h"
+
