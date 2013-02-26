@@ -5,6 +5,16 @@ void initialize_SDL()
     SDL_Init(SDL_INIT_VIDEO);
 }
 
+display* initialize_display(int height, int width)
+{
+    display *disp;
+    disp = malloc(sizeof(display));
+    disp->definition.y = height;
+    disp->definition.x = width;
+    disp->character = NULL;
+    disp->platform = NULL;
+    disp->screen
+}
 
 void free_SDL()
 {

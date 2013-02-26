@@ -23,7 +23,12 @@ struct sDisplay
 typedef struct sDisplay display;
 
 void initialize_SDL();
-display* initialize_display();
+display* initialize_display(int height, int width, char format, char *mode, char *window_name);
+/* précondition :   - weight et width contiennent la taille de l'écran
+                    - format contient le format de codage des pixel (mettre a 32)
+                    - mode est le mode d'affichage de l'écran
+   postcondition : display initialisé */
+
 sprite* initialize_sprite();
 
 void free_SDL();
@@ -41,6 +46,11 @@ SDL_Rect get_sPosition (const sprite *sp);
 /* set */
 void set_dDefiniton (display *disp, int height, int width);
 void set_dScreen (display *disp, int height, int width, int format, char *mode);
+/* précondition :   - weight et width contiennent la taille de l'écran
+                    - format contient le format de codage des pixel (mettre a 32)
+                    - mode est le mode d'affichage de l'écran
+
+*/
 void set_dCharacter (display *disp, char *path, int height, int width);
 /* précondition :   - disp initialisé
                     - path contient le chemin relatif de l'image
@@ -63,5 +73,7 @@ int convert_position_obj (int height_screen, int obj_position, int screen_positi
 tandis que notre moteur considére que le point (0,0) est en bas à droite
 du niveau, cette fonction convertis une hauteur envoyée par le moteur
 en une hauteur utilisable pour la SDL */
+
+
 
 #endif
