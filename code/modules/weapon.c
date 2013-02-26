@@ -1,21 +1,13 @@
 #include "weapon.h"
-/*
-struct sWeapon
-{
-    int ID;
-    int damage;
-    int hit_number;
-};
-*/
-// initialisation et libération
-void init_weapon(weapon * weap)
+
+void init_weapon(weapon * weap) // initialisation weapon attention le malloc sera a faire !!
 {
     weap->ID=0;
     weap->damage=0;
     weap->hit_number=0;
 }
 
-void free_weapon(weapon * weap)
+void free_weapon(weapon * weap) // libération weapon
 {
     weap->ID=0;
     weap->damage=0;

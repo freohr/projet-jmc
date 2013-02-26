@@ -35,6 +35,10 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="modules\display.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules\display.h" />
 		<Unit filename="modules\ennemy.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -47,6 +51,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="modules\object.h" />
+		<Unit filename="modules\struct.h" />
 		<Unit filename="modules\weapon.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -22,7 +22,7 @@
 1361898722 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\main_char.c
 	"main_char.h"
 
-1361898865 c:\users\boubidou\documents\github\projet-jmc\code\modules\main_char.h
+1361901403 c:\users\boubidou\documents\github\projet-jmc\code\modules\main_char.h
 	<stdio.h>
 	<stdlib.h>
 	"object.h"
@@ -32,11 +32,13 @@
 1361897863 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\object.c
 	"object.h"
 
-1361898821 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\weapon.c
+1361900259 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\weapon.c
 	"weapon.h"
 
 1361890443 source:c:\users\boubidou\documents\github\projet-jmc\code\main.c
 	<stdio.h>
 	<stdlib.h>
 	"modules/main_char.h"
+
+1361897863 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\display.c
 
