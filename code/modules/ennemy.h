@@ -6,6 +6,15 @@
 #include "object.h"
 #include "weapon.h"
 
+enum eAction
+{
+    distance=1,
+    melee=2,
+    movement=3,
+    wait=4
+};
+typedef eAction action;
+
 struct sEnnemy
 {
 	int ID;
@@ -14,8 +23,9 @@ struct sEnnemy
 	//gear : table of weapon (voir weapon) voir ligne suivante improvisation
     weapon weap;
 	int nb_grenades;
-	enum state {crouch=1, hit=2, jump=3, normal=4};
-	enum action {distance=1, melee=2, move=3, wait4};
+	state etat;
+	action actuelle;
+
 };
 typedef struct sEnnemy ennemy;
 
