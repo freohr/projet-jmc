@@ -21,7 +21,7 @@ int get_pHitbox(const plateform *pf);
 
 //Set functions
 
-void set_pID(plateform *pf);
+void set_pID(plateform *pf, int id);
 void set_pPosition(plateform *pf, int x, int y);
 void set_pSpeed(plateform *pf, int x, int y);
 void set_pHitbox(plateform *pf, int x, int y);
