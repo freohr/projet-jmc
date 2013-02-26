@@ -89,3 +89,47 @@
 1361901820 source:c:\users\freohr\documents\github\projet-jmc\code\modules\weapon.c
 	"weapon.h"
 
+1361893590 source:c:\users\leo\documents\github\projet-jmc\code\main.c
+	<stdio.h>
+	<stdlib.h>
+	"modules/main_char.h"
+
+1361910959 c:\users\leo\documents\github\projet-jmc\code\modules\main_char.h
+	<stdio.h>
+	<stdlib.h>
+	"object.h"
+	"weapon.h"
+	"struct.h"
+
+1361910959 c:\users\leo\documents\github\projet-jmc\code\modules\object.h
+	<stdio.h>
+	<stdlib.h>
+	"struct.h"
+
+1361910959 c:\users\leo\documents\github\projet-jmc\code\modules\struct.h
+	<stdlib.h>
+	<stdio.h>
+
+1361910959 c:\users\leo\documents\github\projet-jmc\code\modules\weapon.h
+
+1361910959 source:c:\users\leo\documents\github\projet-jmc\code\modules\ennemy.c
+	"ennemy.h"
+
+1361910959 c:\users\leo\documents\github\projet-jmc\code\modules\ennemy.h
+	<stdlib.h>
+	<stdio.h>
+	"object.h"
+	"weapon.h"
+	"struct.h"
+
+1361910959 source:c:\users\leo\documents\github\projet-jmc\code\modules\main_char.c
+	"main_char.h"
+
+1361910959 source:c:\users\leo\documents\github\projet-jmc\code\modules\object.c
+	"object.h"
+
+1361910959 source:c:\users\leo\documents\github\projet-jmc\code\modules\weapon.c
+	"weapon.h"
+	<stdlib.h>
+	<stdio.h>
+
