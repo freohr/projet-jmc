@@ -35,19 +35,32 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+<<<<<<< HEAD
 		<Unit filename="modules\ennemy.c">
+=======
+		<Unit filename="modules/display.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/display.h" />
+		<Unit filename="modules/main_char.c">
+>>>>>>> ed43c118bcb8e589e23b61b7f1efba6fb799e650
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="modules\ennemy.h" />
 		<Unit filename="modules\main_char.c">
 			<Option compilerVar="CC" />
 		</Unit>
+<<<<<<< HEAD
 		<Unit filename="modules\main_char.h" />
 		<Unit filename="modules\object.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="modules\object.h" />
 		<Unit filename="modules\weapon.h" />
+=======
+		<Unit filename="modules/object.h" />
+		<Unit filename="modules/struct.h" />
+>>>>>>> ed43c118bcb8e589e23b61b7f1efba6fb799e650
 		<Extensions>
 			<code_completion />
 			<envvars />

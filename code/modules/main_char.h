@@ -4,7 +4,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include "object.h"
+<<<<<<< HEAD
 #include "weapon.h"
+=======
+#include "struct.h"
+>>>>>>> ed43c118bcb8e589e23b61b7f1efba6fb799e650
 
 struct sCharacter
 {

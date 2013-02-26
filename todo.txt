@@ -1,0 +1,5 @@
+Game
+Engine -> collision, gravité, mouvement
+Main Character ->
+Weapon
+Object
