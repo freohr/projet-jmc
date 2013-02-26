@@ -50,51 +50,55 @@
 	<stdlib.h>
 	"modules/main_char.h"
 
-1361904923 c:\users\freohr\documents\github\projet-jmc\code\modules\main_char.h
+1361919820 c:\users\freohr\documents\github\projet-jmc\code\modules\main_char.h
 	<stdio.h>
 	<stdlib.h>
 	"object.h"
 	"weapon.h"
 	"struct.h"
 
-1361892477 c:\users\freohr\documents\github\projet-jmc\code\modules\object.h
+1361915112 c:\users\freohr\documents\github\projet-jmc\code\modules\object.h
 	<stdio.h>
 	<stdlib.h>
 	"struct.h"
 
-1361905092 c:\users\freohr\documents\github\projet-jmc\code\modules\struct.h
+1361908058 c:\users\freohr\documents\github\projet-jmc\code\modules\struct.h
 	<stdlib.h>
 	<stdio.h>
 
-1361899224 c:\users\freohr\documents\github\projet-jmc\code\modules\weapon.h
+1361915942 c:\users\freohr\documents\github\projet-jmc\code\modules\weapon.h
 
-1361896270 source:c:\users\freohr\documents\github\projet-jmc\code\modules\display.c
+1361919724 source:c:\users\freohr\documents\github\projet-jmc\code\modules\display.c
+	"display.h"
 
-1361892399 source:c:\users\freohr\documents\github\projet-jmc\code\modules\object.c
+1361915112 source:c:\users\freohr\documents\github\projet-jmc\code\modules\object.c
 	"object.h"
 
 1361898444 source:c:\users\freohr\documents\github\projet-jmc\code\modules\ennemy.c
 	"ennemy.h"
 
-1361905092 c:\users\freohr\documents\github\projet-jmc\code\modules\ennemy.h
+1361915112 c:\users\freohr\documents\github\projet-jmc\code\modules\ennemy.h
 	<stdlib.h>
 	<stdio.h>
 	"object.h"
 	"weapon.h"
 	"struct.h"
 
-1361899224 source:c:\users\freohr\documents\github\projet-jmc\code\modules\main_char.c
+1361920002 source:c:\users\freohr\documents\github\projet-jmc\code\modules\main_char.c
 	"main_char.h"
 
-1361901820 source:c:\users\freohr\documents\github\projet-jmc\code\modules\weapon.c
+1361915957 source:c:\users\freohr\documents\github\projet-jmc\code\modules\weapon.c
 	"weapon.h"
+	<stdlib.h>
+	<stdio.h>
 
-<<<<<<< HEAD
+1361901820 D
+
 1361916580 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\engine.c
 	"engine.h"
 
 1361916682 c:\users\boubidou\documents\github\projet-jmc\code\modules\engine.h
-=======
+
 1361893590 source:c:\users\leo\documents\github\projet-jmc\code\main.c
 	<stdio.h>
 	<stdlib.h>
@@ -138,5 +142,24 @@
 	"weapon.h"
 	<stdlib.h>
 	<stdio.h>
->>>>>>> ce3415f67f35311cd9a6ba171ceaba92fea00b2e
+
+1361910959 415f67f35311cd9a6ba171ceaba92fea00b2e
+
+1361919724 c:\users\freohr\documents\github\projet-jmc\code\modules\display.h
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"struct.h"
+
+1361919724 source:c:\users\freohr\documents\github\projet-jmc\code\modules\engine.c
+	"engine.h"
+
+1361919724 c:\users\freohr\documents\github\projet-jmc\code\modules\engine.h
+
+1361920101 source:c:\users\freohr\documents\github\projet-jmc\code\modules\plateform.c
+	"plateform.h"
+
+1361920131 c:\users\freohr\documents\github\projet-jmc\code\modules\plateform.h
+	"struct.h"
+	"object.h"
 
