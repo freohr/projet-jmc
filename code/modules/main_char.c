@@ -1,9 +1,5 @@
 #include "main_char.h"
 
-<<<<<<< HEAD
-
-=======
->>>>>>> ed43c118bcb8e589e23b61b7f1efba6fb799e650
 //Get Functions
 
 coordinate get_cPosition(const character* char1)

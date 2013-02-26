@@ -2,15 +2,41 @@
 1361893742 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\ennemy.c
 	"ennemy.h"
 
-1361896401 c:\users\boubidou\documents\github\projet-jmc\code\modules\ennemy.h
+1361898919 c:\users\boubidou\documents\github\projet-jmc\code\modules\ennemy.h
 	<stdlib.h>
 	<stdio.h>
 	"object.h"
 	"weapon.h"
 
-1361895203 c:\users\boubidou\documents\github\projet-jmc\code\modules\object.h
+1361897863 c:\users\boubidou\documents\github\projet-jmc\code\modules\object.h
 	<stdio.h>
 	<stdlib.h>
+	"struct.h"
 
-1361895465 c:\users\boubidou\documents\github\projet-jmc\code\modules\weapon.h
+1361898314 c:\users\boubidou\documents\github\projet-jmc\code\modules\weapon.h
+
+1361897863 c:\users\boubidou\documents\github\projet-jmc\code\modules\struct.h
+	<stdlib.h>
+	<stdio.h>
+
+1361898722 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\main_char.c
+	"main_char.h"
+
+1361898865 c:\users\boubidou\documents\github\projet-jmc\code\modules\main_char.h
+	<stdio.h>
+	<stdlib.h>
+	"object.h"
+	"weapon.h"
+	"struct.h"
+
+1361897863 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\object.c
+	"object.h"
+
+1361898821 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\weapon.c
+	"weapon.h"
+
+1361890443 source:c:\users\boubidou\documents\github\projet-jmc\code\main.c
+	<stdio.h>
+	<stdlib.h>
+	"modules/main_char.h"
 
