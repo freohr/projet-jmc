@@ -11,7 +11,7 @@ struct sCharacter
 {
     object disposition;
     int hp;
-    int alive;
+    int alive; // etat mort ou vif si en vie = 1 si mort = 0
     // weapon* gear; //A décommenter une fois le module weapons.c écrit
     // int grenades
     state pose;
