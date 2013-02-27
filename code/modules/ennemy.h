@@ -8,6 +8,7 @@
 #include "weapon.h"
 #include "struct.h"
 
+
 enum eAction
 {
     distance=1,
@@ -23,7 +24,7 @@ struct sEnnemy
 	object disposition;
 	int hp;
 	//gear : table of weapon (voir weapon) voir ligne suivante improvisation
-    weapon weap;
+    weapon* weap;
 	int nb_grenades;
 	state etat;
 	action actuelle;
