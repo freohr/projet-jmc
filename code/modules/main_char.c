@@ -82,7 +82,7 @@ void free_mainChar(character * char1) // libere le main_char !
     free(&char1);
 }
 
-void move_char(character* char1, int direction)
+/*void move_char(character* char1, int direction)
 {
     set_cPosition()
-}
+}*/

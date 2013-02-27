@@ -4,7 +4,7 @@
 
 plateform* init_plateform()
 {
-    plateform pf;
+    plateform* pf;
     pf=malloc(sizeof(plateform));
     pf->disposition.ID=0;
     pf->disposition.hitbox.x=0;
@@ -13,7 +13,7 @@ plateform* init_plateform()
     pf->disposition.speed.y=0;
     pf->disposition.position.x=0;
     pf->disposition.position.y=0;
-    return &pf;
+    return pf;
 }
 
 void free_plateform(plateform* pf)
@@ -32,20 +32,20 @@ void free_plateform(plateform* pf)
 
 int get_pID(const plateform * pf)
 {
-    return get_oID(&(pf->disposition);
+    return get_oID(&(pf->disposition));
 }
 
-int get_pPosition(const plateform *pf)
+coordinate get_pPosition(const plateform *pf)
 {
     return get_oPosition(&(pf->disposition));
 }
 
-int get_pSpeed(const plateform *pf)
+coordinate get_pSpeed(const plateform *pf)
 {
     return get_oSpeed(&(pf->disposition));
 }
 
-int get_pHitbox(const plateform *pf)
+coordinate get_pHitbox(const plateform *pf)
 {
     return get_oHitbox(&(pf->disposition));
 }

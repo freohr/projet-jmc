@@ -37,9 +37,9 @@ int get_cstate (const character * cha); // recupere l'int du state
 
 //Set Functions (modifier les parametres du character
 
-void set_cPosition(const character* char1, int x, int y); // la position du perso
-void set_cSpeed(const character* char1, int x, int y); // la rapidite
-void set_cHitbox(const character* char1, int x, int y); // la hitbox , en fonction de getposition
+void set_cPosition(character* char1, int x, int y); // la position du perso
+void set_cSpeed(character* char1, int x, int y); // la rapidite
+void set_cHitbox(character* char1, int x, int y); // la hitbox , en fonction de getposition
 
 void set_chp (character * cha,int hp); // modifie les points de vie du personnage
 void set_clife (character * cha,int life); // modifier l'etat mort ou vivant
