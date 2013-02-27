@@ -23,6 +23,7 @@ struct sEnnemy
 	int ID;
 	object disposition;
 	int hp;
+	int alive;
 	//gear : table of weapon (voir weapon) voir ligne suivante improvisation
     weapon* weap;
 	int nb_grenades;
@@ -35,16 +36,16 @@ typedef struct sEnnemy ennemy;
 
 // Fonctions
 
-ennemy * init_ennemy ();
-void free_ennemy (ennemy * enm);
+ennemy * init_ennemy (); // DONE
+void free_ennemy (ennemy * enm); // DONE
 
 // Les fonctions en Get 
 object get_edisposition (ennemy * enm);
-int get_ehp (ennemy * enm);
-weapon get_egear (ennemy * enm);
-int get_egrenades (ennemy * enm);
-int get_estate (ennemy * enm);
-int get_eaction (ennemy * enm);
+int get_ehp (ennemy * enm); // DONE
+weapon* get_egear (ennemy * enm); //DONE
+int get_egrenades (ennemy * enm); // DONE
+int get_estate (ennemy * enm); //DONE
+int get_eaction (ennemy * enm); //DONE
 
 // Les fonctions en Set 
 void set_edisposition (ennemy * enm,object disposition);
