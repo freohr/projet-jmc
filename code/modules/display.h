@@ -9,13 +9,13 @@
 struct sSprite
 {
     SDL_Surface *image;
-    SDL_Rect position;
+    SDL_Rect *position;
 };
 typedef struct sSprite sprite;
 
 struct sDisplay
 {
-	SDL_Rect definition; /* taille de l'écran */
+	SDL_Rect *definition; /* taille de l'écran */
 	SDL_Surface *screen;
 	sprite *character;
 	sprite *platform;
@@ -34,7 +34,7 @@ display* initialize_display(int height, int width, int format, char *mode, char 
 
 sprite* initialize_sprite();
 /* postcondition : display initialisé et screen contient une image noire de la taille de l'écran*/
-void initialize_display_module();
+display* initialize_display_module();
 
 void free_SDL();
 void free_display(display *disp);
@@ -42,12 +42,12 @@ void free_sprite(sprite *sp);
 void free_display_module(display *disp);
 
 /* get */
-SDL_Rect get_dDefinition (const display *disp);
+SDL_Rect* get_dDefinition (const display *disp);
 SDL_Surface* get_dScreen (const display *disp);
 sprite* get_dCharacter (const display *disp);
 sprite* get_dPlatform (const display *disp);
 SDL_Surface* get_sImage (const sprite *sp);
-SDL_Rect get_sPosition (const sprite *sp);
+SDL_Rect* get_sPosition (const sprite *sp);
 
 /* set */
 void set_dDefiniton (display *disp, int height, int width);
@@ -82,6 +82,6 @@ tandis que notre moteur considére que le point (0,0) est en bas à droite
 du niveau, cette fonction convertis une hauteur envoyée par le moteur
 en une hauteur utilisable pour la SDL */
 
-
+void display_all(const display *disp);
 
 #endif

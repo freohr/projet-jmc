@@ -12,8 +12,8 @@ display* initialize_display(int height, int width, int format, char *mode, char 
     set_dDefiniton (disp, height, width); /* initialisation de la taille */
     set_dScreen (disp, height, width, format, mode); /* initialise l'écran */
     SDL_WM_SetCaption(window_name, NULL); /* met le nom donné en paramètre à la fenètre */
-    disp->character = initialize_sprite();
-    disp->platform = initialize_sprite();
+    disp->character = initialize_sprite(); /* initialisation de character */
+    disp->platform = initialize_sprite(); /*initialisation de plateforme */
     return disp;
 }
 
@@ -26,12 +26,13 @@ sprite* initialize_sprite()
     return sp;
 }
 
-void initialize_display_module()
+display* initialize_display_module()
 {
     display *disp;
     initialize_SDL();
     disp = initialize_display(640, 480, 32, "SDL_HWSURFACE | SDL_DOUBLEBUF", "prototype");
-    SDL_FillRect(disp->screen, NULL, SDL_MapRGB(disp->screen->format, 0, 0, 0)); /* initialise l'écran en noir */
+    SDL_FillRect(get_dScreen(disp), NULL, SDL_MapRGB(disp->screen->format, 0, 0, 0)); /* initialise l'écran en noir */
+    return disp;
 }
 
 void free_SDL()
@@ -42,15 +43,15 @@ void free_SDL()
 void free_display(display *disp)
 {
     set_dDefiniton (disp, 0, 0);
-    SDL_FreeSurface(disp->screen);
-    free_sprite(disp->character);
-    free_sprite(disp->platform);
+    SDL_FreeSurface(get_dScreen(disp));
+    free_sprite(get_dCharacter(disp));
+    free_sprite(get_dPlatform(disp));
     free(disp);
 }
 
 void free_sprite(sprite *sp)
 {
-    SDL_FreeSurface(sp->image);
+    SDL_FreeSurface(get_sImage(sp));
     set_sPosition (sp, 0, 0);
     free(sp);
 }
@@ -63,7 +64,7 @@ void free_display_module(display *disp)
 
 /* get */
 
-SDL_Rect get_dDefinition (const display *disp)
+SDL_Rect* get_dDefinition (const display *disp)
 {
     return disp->definition;
 }
@@ -88,7 +89,7 @@ SDL_Surface* get_sImage (const sprite *sp)
     return sp->image;
 }
 
-SDL_Rect get_sPosition (const sprite *sp)
+SDL_Rect* get_sPosition (const sprite *sp)
 {
     return sp->position;
 }
@@ -97,8 +98,8 @@ SDL_Rect get_sPosition (const sprite *sp)
 
 void set_dDefiniton (display *disp, int height, int width)
 {
-    disp->definition.y=height;
-    disp->definition.x=width;
+    disp->definition->y=height;
+    disp->definition->x=width;
 }
 
 void set_dScreen (display *disp, int height, int width, int format, char *mode)
@@ -109,15 +110,15 @@ void set_dScreen (display *disp, int height, int width, int format, char *mode)
 void set_dCharacter (display *disp, char *path, int height, int width)
 {
     if (path == NULL)
-        set_sImage(disp->character, path);
-    set_sPosition(disp->character, height, width);
+        set_sImage(get_dCharacter(disp), path);
+    set_sPosition(get_dCharacter(disp), height, width);
 }
 
 void set_dPlatform (display *disp, char *path, int height, int width)
 {
     if (path == NULL)
-        set_sImage(disp->platform, path);
-    set_sPosition(disp->character, height, width);
+        set_sImage(get_dPlatform(disp), path);
+    set_sPosition(get_dPlatform(disp), height, width);
 }
 
 void set_sImage (sprite *sp, char *path)
@@ -128,11 +129,27 @@ void set_sImage (sprite *sp, char *path)
 
 void set_sPosition (sprite *sp, int height, int witdh)
 {
-    sp->position.y = height;
-    sp->position.x = witdh;
+    sp->position->y = height;
+    sp->position->x = witdh;
 }
 
 int convert_position_obj (int height_screen, int obj_position, int screen_position, int height_obj)
 {
     return height_screen - (obj_position - screen_position) - height_obj;
+}
+
+void change_position_character (display *disp, int height, int width)
+{
+    set_sPosition(get_dCharacter(disp), height, width);
+}
+
+void display_all(const display *disp)
+{
+        SDL_FillRect(get_dScreen(disp), NULL, SDL_MapRGB(disp->screen->format, 0, 0, 0));  /* on réinitialise le fond d'écran */
+        SDL_BlitSurface(get_sImage(get_dPlatform(disp)), NULL, get_dScreen(disp), get_sPosition(get_dPlatform(disp)));
+            /* on place le plateforme */
+        SDL_BlitSurface(get_sImage(get_dCharacter(disp)), NULL, get_dScreen(disp),get_sPosition(get_dCharacter(disp)));
+            /* on place le personnage */
+
+        SDL_Flip(get_dScreen(disp)); //on met a jour l'écran
 }

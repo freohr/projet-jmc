@@ -87,5 +87,5 @@ void move_char(character* char1, int direction)
 {
     coordinate movement;
     movement = get_cPosition(char1);
-    set_cPosition(char1, movement+pow(-1, direction), movement.y);
+    set_cPosition(char1, movement.x+pow(-1, direction), movement.y);
 }
