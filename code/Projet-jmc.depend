@@ -102,7 +102,7 @@
 
 1361919305 c:\users\boubidou\documents\github\projet-jmc\code\modules\engine.h
 
-1361925014 source:c:\users\leo\documents\github\projet-jmc\code\main.c
+1361970652 source:c:\users\leo\documents\github\projet-jmc\code\main.c
 	<stdio.h>
 	<stdlib.h>
 	"modules/display.h"
@@ -180,11 +180,10 @@
 	"struct.h"
 	"object.h"
 
-1361924774 c:\users\leo\documents\github\projet-jmc\code\modules\display.h
+1361970502 c:\users\leo\documents\github\projet-jmc\code\modules\display.h
 	<stdio.h>
 	<stdlib.h>
 	<SDL/SDL.h>
-	"struct.h"
 
 1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl.h
 	"SDL_main.h"
@@ -376,7 +375,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1361924452 source:c:\users\leo\documents\github\projet-jmc\code\modules\display.c
+1361970089 source:c:\users\leo\documents\github\projet-jmc\code\modules\display.c
 	"display.h"
 
 1361919766 source:c:\users\leo\documents\github\projet-jmc\code\modules\engine.c
@@ -390,4 +389,20 @@
 1361924575 c:\users\leo\documents\github\projet-jmc\code\modules\plateform.h
 	"struct.h"
 	"object.h"
+
+1361971313 c:\users\leo\documents\github\projet-jmc\code\modules\modulesdl.h
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+
+1361970089 source:c:\users\leo\documents\github\projet-jmc\code\modules\modulesdl.c
+	"moduleSDL.h"
+
+1361971313 source:c:\users\leo\documents\github\projet-jmc\code\modules\imput.c
+	"imput.h"
+
+1361971313 c:\users\leo\documents\github\projet-jmc\code\modules\imput.h
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
 

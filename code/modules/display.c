@@ -1,16 +1,11 @@
 #include "display.h"
 
-void initialize_SDL()
-{
-    SDL_Init(SDL_INIT_VIDEO);
-}
-
-display* initialize_display(int height, int width, int format, char *mode, char *window_name)
+display* initialize_display(int width, int height, int format, Uint32 flags, const char *window_name)
 {
     display *disp;
     disp = malloc(sizeof(display));
-    set_dDefiniton (disp, height, width); /* initialisation de la taille */
-    set_dScreen (disp, height, width, format, mode); /* initialise l'écran */
+    disp->definition = initialize_SDL_Rect(width, height,0,0); /*initialisation de la taille de l'écran */
+    set_dScreen (disp, width, height, format, flags); /* initialise l'écran */
     SDL_WM_SetCaption(window_name, NULL); /* met le nom donné en paramètre à la fenètre */
     disp->character = initialize_sprite(); /* initialisation de character */
     disp->platform = initialize_sprite(); /*initialisation de plateforme */
@@ -22,7 +17,7 @@ sprite* initialize_sprite()
     sprite *sp;
     sp = malloc(sizeof(sprite));
     sp->image = NULL;
-    set_sPosition (sp, 0, 0);
+    sp->position = initialize_SDL_Rect(0, 0, 0, 0);
     return sp;
 }
 
@@ -30,19 +25,26 @@ display* initialize_display_module()
 {
     display *disp;
     initialize_SDL();
-    disp = initialize_display(640, 480, 32, "SDL_HWSURFACE | SDL_DOUBLEBUF", "prototype");
+    disp = initialize_display(640, 480, 32, SDL_HWSURFACE | SDL_DOUBLEBUF, "prototype");
     SDL_FillRect(get_dScreen(disp), NULL, SDL_MapRGB(disp->screen->format, 0, 0, 0)); /* initialise l'écran en noir */
     return disp;
 }
 
-void free_SDL()
+SDL_Rect* initialize_SDL_Rect(int width, int height, int x, int y)
 {
-    SDL_Quit();
+    SDL_Rect *rect;
+    rect = malloc(sizeof(SDL_Rect));
+	rect->h = height;
+	rect->w = width;
+	rect->x = x;
+	rect->y = y;
+	return rect;
 }
+
 
 void free_display(display *disp)
 {
-    set_dDefiniton (disp, 0, 0);
+    free_SDL_Rect(get_dDefinition(disp));
     SDL_FreeSurface(get_dScreen(disp));
     free_sprite(get_dCharacter(disp));
     free_sprite(get_dPlatform(disp));
@@ -52,7 +54,7 @@ void free_display(display *disp)
 void free_sprite(sprite *sp)
 {
     SDL_FreeSurface(get_sImage(sp));
-    set_sPosition (sp, 0, 0);
+    free_SDL_Rect(get_sPosition(sp));
     free(sp);
 }
 
@@ -62,6 +64,14 @@ void free_display_module(display *disp)
     free_SDL();
 }
 
+void free_SDL_Rect(SDL_Rect *rect)
+{
+    rect->h = 0;
+    rect->w = 0;
+    rect->x = 0;
+    rect->y = 0;
+    free(rect);
+}
 /* get */
 
 SDL_Rect* get_dDefinition (const display *disp)
@@ -96,29 +106,31 @@ SDL_Rect* get_sPosition (const sprite *sp)
 
 /* set */
 
-void set_dDefiniton (display *disp, int height, int width)
+void set_dDefiniton (display *disp, int width, int height)
 {
-    disp->definition->y=height;
-    disp->definition->x=width;
+    disp->definition->h=height;
+    disp->definition->w=width;
 }
 
-void set_dScreen (display *disp, int height, int width, int format, char *mode)
+void set_dScreen (display *disp, int width, int height, int format, Uint32 flags)
 {
-    disp->screen = SDL_SetVideoMode(height, width, format, mode);
+    disp->screen = SDL_SetVideoMode(width, height, format, flags);
 }
 
-void set_dCharacter (display *disp, char *path, int height, int width)
+void set_dCharacter (display *disp, char *path, int width, int height, int x, int y)
 {
     if (path == NULL)
         set_sImage(get_dCharacter(disp), path);
-    set_sPosition(get_dCharacter(disp), height, width);
+    set_sPosition(get_dCharacter(disp), width, height);
+    set_sSize (get_dCharacter(disp), x, y);
 }
 
-void set_dPlatform (display *disp, char *path, int height, int width)
+void set_dPlatform (display *disp, char *path, int width, int height, int x, int y)
 {
     if (path == NULL)
         set_sImage(get_dPlatform(disp), path);
-    set_sPosition(get_dPlatform(disp), height, width);
+    set_sPosition(get_dPlatform(disp), width, height);
+    set_sSize (get_dPlatform(disp), width, height);
 }
 
 void set_sImage (sprite *sp, char *path)
@@ -127,10 +139,16 @@ void set_sImage (sprite *sp, char *path)
         sp->image = SDL_LoadBMP(path);
 }
 
-void set_sPosition (sprite *sp, int height, int witdh)
+void set_sSize (sprite *sp, int width, int height)
 {
-    sp->position->y = height;
-    sp->position->x = witdh;
+    sp->position->h = height;
+    sp->position->w = width;
+}
+
+void set_sPosition (sprite *sp, int x, int y)
+{
+    sp->position->x = x;
+    sp->position->y = y;
 }
 
 int convert_position_obj (int height_screen, int obj_position, int screen_position, int height_obj)
@@ -138,9 +156,9 @@ int convert_position_obj (int height_screen, int obj_position, int screen_positi
     return height_screen - (obj_position - screen_position) - height_obj;
 }
 
-void change_position_character (display *disp, int height, int width)
+void change_position_character (display *disp, int width, int height)
 {
-    set_sPosition(get_dCharacter(disp), height, width);
+    set_sPosition(get_dCharacter(disp), width, height);
 }
 
 void display_all(const display *disp)

@@ -35,6 +35,8 @@
 		</Compiler>
 		<Linker>
 			<Add library="bin\Debug\SDL.dll" />
+			<Add library="mingw32" />
+			<Add library="SDLmain" />
 		</Linker>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
@@ -51,10 +53,18 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="modules/ennemy.h" />
+		<Unit filename="modules/imput.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/imput.h" />
 		<Unit filename="modules/main_char.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="modules/main_char.h" />
+		<Unit filename="modules/moduleSDL.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/moduleSDL.h" />
 		<Unit filename="modules/object.c">
 			<Option compilerVar="CC" />
 		</Unit>
