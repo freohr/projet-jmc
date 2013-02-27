@@ -1,4 +1,5 @@
 #include "main_char.h"
+#include<math.h>
 
 //Get Functions
 
@@ -82,7 +83,9 @@ void free_mainChar(character * char1) // libere le main_char !
     free(char1);
 }
 
-/*void move_char(character* char1, int direction)
+void move_char(character* char1, int direction)
 {
-    set_cPosition()
-}*/
+    coordinate movement;
+    movement = get_cPosition(char1);
+    set_cPosition(char1, movement+pow(-1, direction), movement.y);
+}
