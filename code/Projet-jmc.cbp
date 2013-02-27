@@ -35,6 +35,8 @@
 		</Compiler>
 		<Linker>
 			<Add library="bin\Debug\SDL.dll" />
+			<Add library="mingw32" />
+			<Add library="SDLmain" />
 		</Linker>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />

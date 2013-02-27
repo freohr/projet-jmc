@@ -16,8 +16,9 @@ struct sEnnemy
 	int ID;
 	object disposition;
 	int hp;
+	int alive;
 	//gear : table of weapon (voir weapon) voir ligne suivante improvisation
-    weapon weap;
+    weapon * weap;
 	int nb_grenades;
 	state etat;
 	action actuelle;
@@ -41,6 +42,7 @@ ennemy * init_ennemy () // LE MEC N'A PAS D'ARME
    enn=malloc(sizeof(ennemy));
    enn->ID=0;
    enn->hp=100;
+   enn->alive=1; // l'ennemie est par defaut en vie
    enn->nb_grenades=0;
    enn->etat=normal;
    enn->actuelle=wait;
@@ -63,3 +65,42 @@ void free_ennemy (ennemy * enm)
    free_weapon(enm->weap);
    free(enm);
 }
+
+
+// FONCTION GET ENEMIE
+int get_ehp (ennemy * enm) //retourne le nombre d'hp du mob
+{
+    return enm->hp;
+}
+weapon * get_egear (ennemy * enm) //retourne un pointeur sur l'arme enemie
+{
+    return enm->weap;
+}
+int get_egrenades (ennemy * enm) // retourne le nombre de grenade de l'enemie
+{
+    return enm->nb_grenades;
+}
+int get_estate (ennemy * enm) //retourne l'état de l'enemie
+{
+    return enm->etat;
+}
+int get_eaction (ennemy * enm) //retourne l'action actuelle de l'ennemie
+{
+    return enm->actuelle;
+}
+
+
+// LES FONCTIONS SET ENEMIE
+void set_ehp (ennemy * enm,int hp)
+{
+    enm->hp=hp;
+}
+void set_elife (ennemy * enm,int life)
+{
+    enm->alive=life;
+}
+/*
+void set_egear (ennemy * enm,weapon gear);
+void set_egrenades (ennemy * enm,int nb_grenades);
+void set_estate (ennemy * enm,int state);
+void set_eaction (ennemy * enm,int state); */
