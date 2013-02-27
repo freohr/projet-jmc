@@ -73,11 +73,11 @@ void set_pHitbox(plateform *pf, int x, int y)
 }
 
 //Creation
-void create_plateform(plateform *pf, int id, int xpos, int ypos, int xspeed, int yspeed, int xhit, int yhit)
+void create_plateform(plateform *pf, int id, int xpos, int ypos, int xhit, int yhit)
 {
     set_oID(&(pf->disposition), id);
     set_oPosition(&(pf->disposition), xpos, ypos);
-    set_oSpeed(&(pf->disposition), xspeed, yspeed);
+    set_oSpeed(&(pf->disposition), 0, 0);
     set_oHitbox(&(pf->disposition), xhit, yhit);
 }
 

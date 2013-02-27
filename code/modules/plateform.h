@@ -27,5 +27,5 @@ void set_pSpeed(plateform *pf, int x, int y);
 void set_pHitbox(plateform *pf, int x, int y);
 
 //Creation
-void create_plateform(plateform *pf, int id, int xpos, int ypos, int xspeed, int yspeed, int xhit, int yhit);
+void create_plateform(plateform *pf, int id, int xpos, int ypos, int xhit, int yhit);
 
