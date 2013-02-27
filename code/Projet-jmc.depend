@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1361893742 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\ennemy.c
+1361971031 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\ennemy.c
 	"ennemy.h"
 
-1361910615 c:\users\boubidou\documents\github\projet-jmc\code\modules\ennemy.h
+1361970961 c:\users\boubidou\documents\github\projet-jmc\code\modules\ennemy.h
 	<stdlib.h>
 	<stdio.h>
 	"object.h"
@@ -16,12 +16,13 @@
 
 1361919332 c:\users\boubidou\documents\github\projet-jmc\code\modules\weapon.h
 
-1361908724 c:\users\boubidou\documents\github\projet-jmc\code\modules\struct.h
+1361968743 c:\users\boubidou\documents\github\projet-jmc\code\modules\struct.h
 	<stdlib.h>
 	<stdio.h>
 
-1361910615 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\main_char.c
+1361966954 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\main_char.c
 	"main_char.h"
+	<math.h>
 
 1361923313 c:\users\boubidou\documents\github\projet-jmc\code\modules\main_char.h
 	<stdio.h>
@@ -38,12 +39,12 @@
 	<stdlib.h>
 	<stdio.h>
 
-1361890443 source:c:\users\boubidou\documents\github\projet-jmc\code\main.c
+1361966954 source:c:\users\boubidou\documents\github\projet-jmc\code\main.c
 	<stdio.h>
 	<stdlib.h>
-	"modules/main_char.h"
+	"modules/display.h"
 
-1361919332 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\display.c
+1361966954 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\display.c
 	"display.h"
 
 1361968537 source:c:\users\freohr\documents\github\projet-jmc\code\main.c
@@ -103,7 +104,7 @@
 1361919305 source:c:\users\boubidou\documents\github\projet-jmc\code\modules\engine.c
 	"engine.h"
 
-1361919305 c:\users\boubidou\documents\github\projet-jmc\code\modules\engine.h
+1361966954 c:\users\boubidou\documents\github\projet-jmc\code\modules\engine.h
 
 1361925014 source:c:\users\leo\documents\github\projet-jmc\code\main.c
 	<stdio.h>
@@ -171,7 +172,7 @@
 	"struct.h"
 	"object.h"
 
-1361922964 c:\users\boubidou\documents\github\projet-jmc\code\modules\display.h
+1361966954 c:\users\boubidou\documents\github\projet-jmc\code\modules\display.h
 	<stdio.h>
 	<stdlib.h>
 	<SDL/SDL.h>
