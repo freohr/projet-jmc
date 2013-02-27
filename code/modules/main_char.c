@@ -79,7 +79,7 @@ void free_mainChar(character * char1) // libere le main_char !
     set_clife(char1,1); // modifier l'etat mort ou vivant 0 mort, 1 vivant
     set_cstate(char1,normal);
     free_object(&(char1->disposition));
-    free(&char1);
+    free(char1);
 }
 
 /*void move_char(character* char1, int direction)
