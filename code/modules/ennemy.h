@@ -40,35 +40,40 @@ ennemy * init_ennemy (); // DONE
 void free_ennemy (ennemy * enm); // DONE
 
 // Les fonctions en Get 
-object get_edisposition (ennemy * enm);
-int get_ehp (ennemy * enm); // DONE
-weapon* get_egear (ennemy * enm); //DONE
-int get_egrenades (ennemy * enm); // DONE
-int get_estate (ennemy * enm); //DONE
-int get_eaction (ennemy * enm); //DONE
+coordinate get_ePosition(const ennemy* enm);
+coordinate get_eSpeed(const ennemym* enm);
+coordinate get_eHitbox(const ennemy* enm);
+
+int get_eHP (ennemy* enm); // DONE
+weapon* get_eGear (ennemy* enm); //DONE
+int get_eGrenades (ennemy* enm); // DONE
+int get_eState (ennemy* enm); //DONE
+int get_eAction (ennemy* enm); //DONE
+
+object* get_eObject(const ennemy* enm);
 
 // Les fonctions en Set 
-void set_edisposition (ennemy * enm,object disposition);
-void set_ehp (ennemy * enm,int hp);
-void set_elife (ennemy * enm,int life);
-void set_egear (ennemy * enm,weapon gear);
-void set_egrenades (ennemy * enm,int nb_grenades);
-void set_estate (ennemy * enm,int state);
-void set_eaction (ennemy * enm,int state);
+void set_eDisposition (ennemy* enm, object disposition);
+void set_eHP (ennemy* enm, int hp);
+void set_eLife (ennemy* enm, int life);
+void set_eGear (ennemy* enm, weapon gear);
+void set_eGrenades (ennemy* enm, int nb_grenades);
+void set_eState (ennemy* enm, int state);
+void set_eAction (ennemy* enm, int state);
 
 
 // other
-void emove (ennemy * enm,int speed,int angle);
-void ejump (ennemy * enm,int speed,int angle);
-void ecrouch (ennemy * enm, int direction);
-void ecover (ennemy * enm, int direction);
-void eclimb (ennemy * enm, int direction);  /* ici la direction sera haut où bas */
+void emove (ennemy* enm, int speed, int angle);
+void ejump (ennemy* enm, int speed, int angle);
+void ecrouch (ennemy* enm, int direction);
+void ecover (ennemy* enm, int direction);
+void eclimb (ennemy* enm, int direction);  /* ici la direction sera haut où bas */
 
-void eshoot (ennemy * enm,int direction,int angle);
-void egrenade (ennemy * enm,int direction,int angle);
-void emelee (ennemy * enm,int direction);
+void eshoot (ennemy* enm, int direction, int angle);
+void egrenade (ennemy* enm, int direction, int angle);
+void emelee (ennemy* enm, int direction);
 
-void edeath (ennemy * enm);
+void edeath (ennemy* enm);
 
 
 #endif // ENNEMY_H_INCLUDED

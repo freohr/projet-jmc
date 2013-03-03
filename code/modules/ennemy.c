@@ -1,6 +1,5 @@
 #include "ennemy.h"
 
-
 /*
 enum eAction
 {
@@ -35,26 +34,25 @@ struct sWeapon
 typedef struct sWeapon weapon;
 */
 
-
-ennemy * init_ennemy () // LE MEC N'A PAS D'ARME
+ennemy* init_ennemy() // LE MEC N'A PAS D'ARME
 {
-   ennemy * enn;
-   enn=malloc(sizeof(ennemy));
-   enn->ID=0;
-   enn->hp=100;
-   enn->alive=1; // l'ennemie est par defaut en vie
-   enn->nb_grenades=0;
-   enn->etat=normal;
-   enn->actuelle=wait;
-   // creation de l'arme de l'enemie :
+    ennemy* enn;
+    enn=malloc(sizeof(ennemy));
+    enn->ID=0;
+    enn->hp=100;
+    enn->alive=1; // l'ennemi est par défaut en vie
+    enn->nb_grenades=0;
+    enn->etat=normal;
+    enn->actuelle=wait;
+    // creation de l'arme de l'ennemi :
     weapon * weap1;
-   weap1=init_weapon();
-   enn->weap=weap1;
+    weap1=init_weapon();
+    enn->weap=weap1;
 
     return enn;
 }
 
-void free_ennemy (ennemy * enm)
+void free_ennemy(ennemy * enm)
 {
    enm->ID=0;
    enm->hp=100;
@@ -67,35 +65,61 @@ void free_ennemy (ennemy * enm)
 }
 
 
-// FONCTION GET ENEMIE
-int get_ehp (ennemy * enm) //retourne le nombre d'hp du mob
+// Gets
+// Les fonctions en Get 
+coordinate get_ePosition(const ennemy* enm)
+{
+    return get_oPosition(enm->disposition);
+}
+
+coordinate get_eSpeed(const ennemy* enm)
+{
+    return get_oSpeed(enm->disposition);
+}
+
+coordinate get_eHitbox(const ennemy* enm)
+{
+    return get_oHitbox(enm->disposition);
+}
+
+object* get_eObject(const ennemy* enm)
+{
+    return &(enm->disposition);
+}
+
+int get_eHP(ennemy* enm) //retourne le nombre d'hp du mob
 {
     return enm->hp;
 }
-weapon * get_egear (ennemy * enm) //retourne un pointeur sur l'arme enemie
+
+weapon * get_eGear(ennemy* enm) //retourne un pointeur sur l'arme enemie
 {
     return enm->weap;
 }
-int get_egrenades (ennemy * enm) // retourne le nombre de grenade de l'enemie
+
+int get_eGrenades(ennemy* enm) // retourne le nombre de grenade de l'enemie
 {
     return enm->nb_grenades;
 }
-int get_estate (ennemy * enm) //retourne l'état de l'enemie
+
+int get_eState(ennemy* enm) //retourne l'état de l'enemie
 {
     return enm->etat;
 }
-int get_eaction (ennemy * enm) //retourne l'action actuelle de l'ennemie
+
+int get_eAction(ennemy* enm) //retourne l'action actuelle de l'ennemie
 {
     return enm->actuelle;
 }
 
 
-// LES FONCTIONS SET ENEMIE
-void set_ehp (ennemy * enm,int hp)
+// Sets
+void set_eHP(ennemy* enm, int hp)
 {
     enm->hp=hp;
 }
-void set_elife (ennemy * enm,int life)
+
+void set_eLife(ennemy* enm, int life)
 {
     enm->alive=life;
 }
