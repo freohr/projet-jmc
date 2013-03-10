@@ -29,18 +29,18 @@ int get_cAlive(const character* char1)
 }
 
 //Set Functions
-void set_chp (character * cha,int hp) // modifie les points de vie du personnage
+void set_cHP(character* cha,int hp) // modifie les points de vie du personnage
 {
     cha->hp=hp;
 }
-void set_clife (character * cha,int life) // modifier l'etat mort ou vivant 0 mort, 1 vivant
+void set_cLife(character* cha,int life) // modifier l'etat mort ou vivant 0 mort, 1 vivant
 {
     cha->alive=life;
 }
 // void set_cgear (character * cha,weapon gear); // modifier le tableau d'arme A FAIRE PLUS TARD !!!!!!!!!!!!
 // void set_cgrenades (character * cha,int nb_grenades); //modifier le nombre de grenade
 
-void set_cstate (character * cha, state state1) // modifier l'état du personnage
+void set_cState(character* cha, state state1) // modifier l'état du personnage
 {
     cha->pose=state1;
 }
