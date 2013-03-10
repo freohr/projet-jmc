@@ -41,7 +41,7 @@ void free_ennemy (ennemy * enm); // DONE
 
 // Les fonctions en Get 
 coordinate get_ePosition(const ennemy* enm);
-coordinate get_eSpeed(const ennemym* enm);
+coordinate get_eSpeed(const ennemy* enm);
 coordinate get_eHitbox(const ennemy* enm);
 
 int get_eHP (ennemy* enm); // DONE

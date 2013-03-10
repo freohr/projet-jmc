@@ -31,10 +31,10 @@ coordinate get_cHitbox(const character* char1);
 object* get_cObject(const character* char1); //pour la fonction de mouvement (pour avoir une seule fonction, et éviter les cast sur des (void*)
 
 int get_cHP(const character* char1);
-int get_calive (const character * cha ); // etat mort ou vif si en vie = 1 si mort = 0
-weapon get_cgear (const character * cha); // renvoie tableau d'arme actuel
-int get_cgrenades (const character * cha); // recupere le nombre de grenade
-int get_cstate (const character * cha); // recupere l'int du state
+int get_calive (const character* cha ); // etat mort ou vif si en vie = 1 si mort = 0
+weapon get_cgear (const character* cha); // renvoie tableau d'arme actuel
+int get_cgrenades (const character* cha); // recupere le nombre de grenade
+int get_cstate (const character* cha); // recupere l'int du state
 
 
 //Set Functions (modifier les parametres du character

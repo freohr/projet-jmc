@@ -63,14 +63,14 @@ void set_dScreen (display *disp, int width, int height, int format, Uint32 flags
 void set_dCharacter (display *disp, char *path, int width, int height, int x, int y);
 /* précondition :   - disp initialisé
                     - path contient le chemin relatif de l'image
-                    - si path est NULL, l'image ne sera pas changée
+                    - si path est NULL, l'image ne sera pas chargée/changée si déjà chargée
                     - weight et width contiennent la taille du personnage
                     - x et y contiennent la position du personnage */
 
 void set_dPlatform (display *disp, char *path, int width, int height, int x, int y);
 /* précondition :   - disp initialisé
                     - path contient le chemin relatif de l'image
-                    - si path est NULL, l'image ne sera pas changée
+                    - si path est NULL, l'image ne sera pas chargée/changée si déjà chargée
                     - weight et width contiennent la taille de la plateforme
                     - x et y contiennent la position de la plateforme */
 

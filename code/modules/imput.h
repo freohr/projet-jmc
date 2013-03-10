@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <SDL/SDL.h>
 
+#include "main_char.h"
+
 /* vide pour l'instant, a supprimer peut être */
 
 void input_cMove(character* char1);

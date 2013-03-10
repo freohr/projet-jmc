@@ -1,5 +1,7 @@
 #include "display.h"
 
+// Inits and Frees
+
 display* initialize_display(int width, int height, int format, Uint32 flags, const char *window_name)
 {
     display *disp;
@@ -72,6 +74,7 @@ void free_SDL_Rect(SDL_Rect *rect)
     rect->y = 0;
     free(rect);
 }
+
 /* get */
 
 SDL_Rect* get_dDefinition (const display *disp)
@@ -104,6 +107,7 @@ SDL_Rect* get_sPosition (const sprite *sp)
     return sp->position;
 }
 
+
 /* set */
 
 void set_dDefiniton (display *disp, int width, int height)
@@ -119,7 +123,7 @@ void set_dScreen (display *disp, int width, int height, int format, Uint32 flags
 
 void set_dCharacter (display *disp, char *path, int width, int height, int x, int y)
 {
-    if (path == NULL)
+    if (path != NULL)
         set_sImage(get_dCharacter(disp), path);
     set_sPosition(get_dCharacter(disp), width, height);
     set_sSize (get_dCharacter(disp), x, y);
@@ -127,7 +131,7 @@ void set_dCharacter (display *disp, char *path, int width, int height, int x, in
 
 void set_dPlatform (display *disp, char *path, int width, int height, int x, int y)
 {
-    if (path == NULL)
+    if (path != NULL)
         set_sImage(get_dPlatform(disp), path);
     set_sPosition(get_dPlatform(disp), width, height);
     set_sSize (get_dPlatform(disp), width, height);
@@ -135,7 +139,7 @@ void set_dPlatform (display *disp, char *path, int width, int height, int x, int
 
 void set_sImage (sprite *sp, char *path)
 {
-    if (path == NULL)
+    if (path != NULL)
         sp->image = SDL_LoadBMP(path);
 }
 
@@ -151,6 +155,8 @@ void set_sPosition (sprite *sp, int x, int y)
     sp->position->y = y;
 }
 
+
+// Various
 int convert_position_obj (int height_screen, int obj_position, int screen_position, int height_obj)
 {
     return height_screen - (obj_position - screen_position) - height_obj;
