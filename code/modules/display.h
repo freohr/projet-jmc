@@ -60,32 +60,32 @@ void set_dScreen (display *disp, int width, int height, int format, Uint32 flags
                     - flags est le mode d'affichage de l'écran
 */
 
-void set_dCharacter (display *disp, char *path, int width, int height, int x, int y);
+void set_dCharacter_sprite (display *disp, char *path);
 /* précondition :   - disp initialisé
                     - path contient le chemin relatif de l'image
-                    - si path est NULL, l'image ne sera pas changée
-                    - weight et width contiennent la taille du personnage
+   postcondition : la taille du sprite est contenue dans SDL_Surface */
+
+void set_dCharacter_position (display *disp, int x, int y);
+/* précondition :   -disp initialisé
                     - x et y contiennent la position du personnage */
 
-void set_dPlatform (display *disp, char *path, int width, int height, int x, int y);
+void set_dPlatform_sprite (display *disp, char *path);
 /* précondition :   - disp initialisé
-                    - path contient le chemin relatif de l'image
-                    - si path est NULL, l'image ne sera pas changée
-                    - weight et width contiennent la taille de la plateforme
-                    - x et y contiennent la position de la plateforme */
+                    - path contient le chemin relatif de l'image */
+
+void set_dPlatform_position (display *disp, int x, int y);
+/* précondition :   - disp initialisé
+                    - x et y contiennent la position de la plateforme
+   postcondition : la taille du sprite est contenue dans SDL_Surface */
 
 void set_sImage (sprite *sp, char *path);
 /* précondition :   - sp initialisé
-                    - path contient le chemin relatif de l'image
-                    - si path est NULL, l'image ne sera pas changée*/
-
-void set_sSize (sprite *sp, int width, int height);
-/* précondition :   - disp initialisé
-                    - height et width contiennent la taille de l'image */
+                    - path contient le chemin relatif de l'image*/
 
 void set_sPosition (sprite *sp, int x, int y);
 /* précondition :   - disp initialisé
-                    - x et y contiennent la position de l'image */
+                    - x et y contiennent la position de l'image
+   postcondition : la taille du sprite est contenue dans SDL_Surface */
 
 int convert_position_obj (int height_screen, int obj_position, int screen_position, int height_obj);
 /* la SDL considére que le point (0,0) est en haut à gauche de l'écran
