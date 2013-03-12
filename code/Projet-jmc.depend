@@ -1,4 +1,5 @@
 # depslib dependency file v1.0
+<<<<<<< HEAD
 1362872035 source:e:\users\freohr\documents\github\projet-jmc\code\main.c
 	<stdio.h>
 	<stdlib.h>
@@ -24,6 +25,17 @@
 	<stddef.h>
 
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl.h
+=======
+1361971313 source:c:\users\leo\documents\github\projet-jmc\code\modules\imput.c
+	"imput.h"
+
+1361971313 c:\users\leo\documents\github\projet-jmc\code\modules\imput.h
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl.h
+>>>>>>> display
 	"SDL_main.h"
 	"SDL_stdinc.h"
 	"SDL_audio.h"
@@ -42,14 +54,22 @@
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_main.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_main.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_stdinc.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_stdinc.h
+>>>>>>> display
 	"SDL_config.h"
 	<sys/types.h>
 	<stdio.h>
@@ -75,7 +95,11 @@
 	<stdlib.h>
 	"close_code.h"
 
+<<<<<<< HEAD
 1326110988 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_config.h
+=======
+1326110988 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_config.h
+>>>>>>> display
 	"SDL_platform.h"
 	"SDL_config_dreamcast.h"
 	"SDL_config_macos.h"
@@ -85,6 +109,7 @@
 	"SDL_config_os2.h"
 	"SDL_config_minimal.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_platform.h
 
 1326110994 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_config_win32.h
@@ -121,6 +146,18 @@
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\close_code.h
 
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_audio.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_platform.h
+
+1326110994 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_config_win32.h
+	"SDL_platform.h"
+
+1326111000 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\begin_code.h
+
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\close_code.h
+
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_audio.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_endian.h"
@@ -130,24 +167,40 @@
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_error.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_error.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_endian.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_endian.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	<endian.h>
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_mutex.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_mutex.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_thread.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_thread.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_mutex.h"
@@ -155,29 +208,45 @@
 	<process.h>
 	"close_code.h"
 
+<<<<<<< HEAD
 1341006774 c:\program files (x86)\codeblocks\mingw\include\process.h
 	<_mingw.h>
 	<sys/types.h>
 	<stdint.h>
 
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_rwops.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_rwops.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_cdrom.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_cdrom.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_cpuinfo.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_cpuinfo.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_events.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_events.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_active.h"
@@ -188,62 +257,101 @@
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_active.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_active.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_keyboard.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_keyboard.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_keysym.h"
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_keysym.h
 
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_mouse.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_keysym.h
+
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_mouse.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_video.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_video.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_rwops.h"
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_joystick.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_joystick.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_loadso.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_loadso.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_timer.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_timer.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_version.h
+=======
+1325738640 c:\program files (x86)\codeblocks\sdl-1.2.15\include\sdl\sdl_version.h
+>>>>>>> display
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
+<<<<<<< HEAD
 1362872121 e:\users\freohr\documents\github\projet-jmc\code\modules\display.h
 	<stdio.h>
 	<stdlib.h>
@@ -253,10 +361,25 @@
 	"object.h"
 
 1361979299 e:\users\freohr\documents\github\projet-jmc\code\modules\object.h
+=======
+1361924800 source:c:\users\leo\documents\github\projet-jmc\code\modules\main_char.c
+	"main_char.h"
+	<math.h>
+
+1361924575 c:\users\leo\documents\github\projet-jmc\code\modules\main_char.h
+	<stdio.h>
+	<stdlib.h>
+	"object.h"
+	"weapon.h"
+	"struct.h"
+
+1361910959 c:\users\leo\documents\github\projet-jmc\code\modules\object.h
+>>>>>>> display
 	<stdio.h>
 	<stdlib.h>
 	"struct.h"
 
+<<<<<<< HEAD
 1361979299 e:\users\freohr\documents\github\projet-jmc\code\modules\struct.h
 	<stdlib.h>
 	<stdio.h>
@@ -295,10 +418,55 @@
 1362835002 e:\users\freohr\documents\github\projet-jmc\code\modules\main_char.h
 	<stdio.h>
 	<stdlib.h>
+=======
+1361972209 c:\users\leo\documents\github\projet-jmc\code\modules\struct.h
+	<stdlib.h>
+	<stdio.h>
+
+1361919144 c:\users\leo\documents\github\projet-jmc\code\modules\weapon.h
+
+1361970089 source:c:\users\leo\documents\github\projet-jmc\code\modules\modulesdl.c
+	"moduleSDL.h"
+
+1361971313 c:\users\leo\documents\github\projet-jmc\code\modules\modulesdl.h
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+
+1361910959 source:c:\users\leo\documents\github\projet-jmc\code\modules\object.c
+	"object.h"
+
+1361919144 source:c:\users\leo\documents\github\projet-jmc\code\modules\weapon.c
+	"weapon.h"
+	<stdlib.h>
+	<stdio.h>
+
+1361989099 source:c:\users\leo\documents\github\projet-jmc\code\modules\display.c
+	"display.h"
+
+1361988649 c:\users\leo\documents\github\projet-jmc\code\modules\display.h
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+
+1361972209 source:c:\users\leo\documents\github\projet-jmc\code\modules\engine.c
+	"engine.h"
+
+1361972209 c:\users\leo\documents\github\projet-jmc\code\modules\engine.h
+	"object.h"
+
+1361972314 source:c:\users\leo\documents\github\projet-jmc\code\modules\ennemy.c
+	"ennemy.h"
+
+1361972314 c:\users\leo\documents\github\projet-jmc\code\modules\ennemy.h
+	<stdlib.h>
+	<stdio.h>
+>>>>>>> display
 	"object.h"
 	"weapon.h"
 	"struct.h"
 
+<<<<<<< HEAD
 1362835001 source:e:\users\freohr\documents\github\projet-jmc\code\modules\main_char.c
 	"main_char.h"
 	<math.h>
@@ -324,4 +492,20 @@
 	"weapon.h"
 	<stdlib.h>
 	<stdio.h>
+=======
+1361972209 source:c:\users\leo\documents\github\projet-jmc\code\modules\plateform.c
+	"plateform.h"
+
+1361972209 c:\users\leo\documents\github\projet-jmc\code\modules\plateform.h
+	"struct.h"
+	"object.h"
+
+1361989046 source:c:\users\leo\documents\github\projet-jmc\code\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"modules/display.h"
+	"modules/engine.h"
+	"modules/plateform.h"
+>>>>>>> display
 

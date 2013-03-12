@@ -26,7 +26,6 @@ sprite* initialize_sprite()
 display* initialize_display_module()
 {
     display *disp;
-    initialize_SDL();
     disp = initialize_display(640, 480, 32, SDL_HWSURFACE | SDL_DOUBLEBUF, "prototype");
     SDL_FillRect(get_dScreen(disp), NULL, SDL_MapRGB(disp->screen->format, 0, 0, 0)); /* initialise l'écran en noir */
     return disp;
@@ -121,26 +120,29 @@ void set_dScreen (display *disp, int width, int height, int format, Uint32 flags
     disp->screen = SDL_SetVideoMode(width, height, format, flags);
 }
 
-void set_dCharacter (display *disp, char *path, int width, int height, int x, int y)
+void set_dCharacter_sprite (display *disp, char *path)
 {
-    if (path != NULL)
-        set_sImage(get_dCharacter(disp), path);
-    set_sPosition(get_dCharacter(disp), width, height);
-    set_sSize (get_dCharacter(disp), x, y);
+    set_sImage(get_dCharacter(disp), path);
 }
 
-void set_dPlatform (display *disp, char *path, int width, int height, int x, int y)
+void set_dCharacter_position (display *disp, int x, int y)
 {
-    if (path != NULL)
-        set_sImage(get_dPlatform(disp), path);
-    set_sPosition(get_dPlatform(disp), width, height);
-    set_sSize (get_dPlatform(disp), width, height);
+    set_sPosition(get_dCharacter(disp), x, y);
+}
+
+void set_dPlatform_sprite (display *disp, char *path)
+{
+    set_sImage(get_dPlatform(disp), path);
+}
+
+void set_dPlatform_position (display *disp, int x, int y)
+{
+    set_sPosition(get_dPlatform(disp), x, y);
 }
 
 void set_sImage (sprite *sp, char *path)
 {
-    if (path != NULL)
-        sp->image = SDL_LoadBMP(path);
+    sp->image = SDL_LoadBMP(path);
 }
 
 void set_sSize (sprite *sp, int width, int height)
@@ -169,7 +171,7 @@ void change_position_character (display *disp, int width, int height)
 
 void display_all(const display *disp)
 {
-        SDL_FillRect(get_dScreen(disp), NULL, SDL_MapRGB(disp->screen->format, 0, 0, 0));  /* on réinitialise le fond d'écran */
+        SDL_FillRect(get_dScreen(disp), NULL, SDL_MapRGB(disp->screen->format, 255, 255, 255));  /* on réinitialise le fond d'écran */
         SDL_BlitSurface(get_sImage(get_dPlatform(disp)), NULL, get_dScreen(disp), get_sPosition(get_dPlatform(disp)));
             /* on place le plateforme */
         SDL_BlitSurface(get_sImage(get_dCharacter(disp)), NULL, get_dScreen(disp),get_sPosition(get_dCharacter(disp)));
