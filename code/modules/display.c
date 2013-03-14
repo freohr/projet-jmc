@@ -171,7 +171,7 @@ void change_position_character (display *disp, int width, int height)
 
 void display_all(const display *disp)
 {
-        SDL_FillRect(get_dScreen(disp), NULL, SDL_MapRGB(disp->screen->format, 255, 255, 255));  /* on réinitialise le fond d'écran */
+        SDL_FillRect(get_dScreen(disp), NULL, SDL_MapRGB(disp->screen->format, 0, 0, 0));  /* on réinitialise le fond d'écran */
         SDL_BlitSurface(get_sImage(get_dPlatform(disp)), NULL, get_dScreen(disp), get_sPosition(get_dPlatform(disp)));
             /* on place le plateforme */
         SDL_BlitSurface(get_sImage(get_dCharacter(disp)), NULL, get_dScreen(disp),get_sPosition(get_dCharacter(disp)));

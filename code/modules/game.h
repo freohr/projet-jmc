@@ -1,5 +1,11 @@
-#incldue<stdlib.h>
+#ifndef _GAME_
+#define _GAME_
 
-#include "imput.h"
+
+#include<stdlib.h>
+
+#include "input.h"
 #include "engine.h"
 #include "display.h"
+
+#endif // _GAME_

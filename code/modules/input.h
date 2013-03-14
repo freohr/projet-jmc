@@ -15,4 +15,9 @@ void input_cMove(character* char1);
     NB : LE PERSONNAGE N'AURA PAS BOUGE, c'est le module "engine" qui va s'occuper de modifier les positions
 */
 
+void input_cAction(character* char1);
+/*  précond : char1 initialisé
+    postcond : l'état actuel du peros est changé (jump, crouch,..) ou le perso vient de tirer
+*/
+
 #endif /* _IMPUT_ */

@@ -17,11 +17,12 @@ int main(int argc, char *argv[])
     disp = initialize_display_module();
 
 
-    set_dCharacter_sprite(disp, "sprite/main_character.bnp");
+    set_dCharacter_sprite(disp, "sprite/main_character.bmp");
     set_dCharacter_position(disp, 60, (640-200-80));
-    set_dPlatform_sprite(disp, "sprite/main_character.bnp");
+    set_dPlatform_sprite(disp, "sprite/floor.bmp");
     set_dPlatform_position(disp, 0, (640-200));
     SDL_BlitSurface(disp->character->image, NULL, disp->screen, disp->character->position);
+    SDL_BlitSurface(disp->platform->image, NULL, disp->screen, disp->platform->position);
     SDL_Flip(disp->screen);
 
 
@@ -33,6 +34,14 @@ int main(int argc, char *argv[])
             case SDL_QUIT:
                 continuer = 0;
                 break;
+
+            case SDL_KEYDOWN:
+                switch(event.key.keysym.sym)
+                {
+                    case SDLK_ESCAPE:
+                        continuer = 0;
+                        break;
+                }
             /*
             case SDL_MOUSEBUTTONDOWN:
                 switch (event.button.button)

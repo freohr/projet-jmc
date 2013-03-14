@@ -58,10 +58,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="modules/game.h" />
-		<Unit filename="modules/imput.c">
+		<Unit filename="modules/input.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="modules/imput.h" />
+		<Unit filename="modules/input.h" />
 		<Unit filename="modules/main_char.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -82,7 +82,7 @@ coordinate get_eHitbox(const ennemy* enm)
     return get_oHitbox(&(enm->disposition));
 }
 
-object* get_eObject(const ennemy* enm)
+object* get_eObject(ennemy* enm)
 {
     return &(enm->disposition);
 }

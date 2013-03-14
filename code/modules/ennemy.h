@@ -50,7 +50,7 @@ int get_eGrenades (ennemy* enm); // DONE
 int get_eState (ennemy* enm); //DONE
 int get_eAction (ennemy* enm); //DONE
 
-object* get_eObject(const ennemy* enm);
+object* get_eObject(ennemy* enm);
 
 // Les fonctions en Set 
 void set_eDisposition (ennemy* enm, object disposition);

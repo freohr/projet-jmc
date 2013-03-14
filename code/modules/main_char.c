@@ -28,6 +28,11 @@ int get_cAlive(const character* char1)
     return char1->alive;
 }
 
+int get_cState(const character* char1)
+{
+    return char1->pose;
+}
+
 //Set Functions
 void set_cHP(character* cha,int hp) // modifie les points de vie du personnage
 {
@@ -71,26 +76,30 @@ character* init_mainChar()//  initialisation et libération
     set_oPosition(&(char1->disposition), 0, 0); // initialise la position du personnage a x=0, y=0
     set_oSpeed(&(char1->disposition), 0, 0); // initialise la rapidité du personnage a x=0, y=0 (vitesse nulle)
     set_oHitbox(&(char1->disposition), 20, 40); // itinialise la hit box
-    set_chp(char1,100);
-    set_clife(char1,1); // modifier l'etat mort ou vivant 0 mort, 1 vivant
-    set_cstate(char1,normal);
+    set_cHP(char1,100);
+    set_cLife(char1,1); // modifier l'etat mort ou vivant 0 mort, 1 vivant
+    set_cState(char1,normal);
 
     return char1;
 }
 
 void free_mainChar(character * char1) // libere le main_char !
 {
-    set_chp(char1,100);
-    set_clife(char1,1); // modifier l'etat mort ou vivant 0 mort, 1 vivant
-    set_cstate(char1,normal);
+    set_cHP(char1,100);
+    set_cLife(char1,1); // modifier l'etat mort ou vivant 0 mort, 1 vivant
+    set_cState(char1,normal);
 
     free_object(&(char1->disposition));
     free(char1);
 }
 
-void move_char(character* char1, int direction)
+void move_char(character* char1)
 {
     coordinate movement;
+    coordinate speed;
+
     movement = get_cPosition(char1);
-    set_cPosition(char1, movement.x+pow(-1, direction), movement.y);
+    speed = get_cSpeed(char1);
+
+    set_cPosition(char1, movement.x+speed.x, movement.y+speed.y);
 }

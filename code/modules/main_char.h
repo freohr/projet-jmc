@@ -50,11 +50,12 @@ void set_cGrenades(character * cha,int nb_grenades); //modifier le nombre de gre
 void set_cState(character * cha,state state1); // modifier l'état du personnage
 
 // other
-void cmove(character * cha,int speed,int angle); // déplace le personnage; appelle getposition get speed setposition
-void cjump(character * cha,int speed,int angle); // A FAIRE ET UTILISE LA SDL
-void ccrouch(character * cha,int direction); // A FAIRE ET UTILISE LA SDL
-void ccover(character * cha,int direction); // A FAIRE ET UTILISE LA SDL
-void cclimb(character * cha,int direction);  /* ici la direction sera haut où bas */
+void move_char(character* cha); // déplace le personnage; appelle getposition get speed setposition
+
+void cjump(character * cha); // A FAIRE ET UTILISE LA SDL
+void ccrouch(character * cha); // A FAIRE ET UTILISE LA SDL
+void ccover(character * cha); // A FAIRE ET UTILISE LA SDL
+void cclimb(character * cha);  /* ici la direction sera haut où bas */
 
 void cshoot(character * cha,int direction,int angle); // A FAIRE ET UTILISE LA SDL
 void cgrenade(character * cha,int direction,int angle); // A FAIRE ET UTILISE LA SDL
