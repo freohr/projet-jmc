@@ -15,11 +15,11 @@ int main(int argc, char *argv[])
     initialize_SDL();
     disp = initialize_display_module();
 
-    set_dCharacter_sprite(disp, "sprite/main_character.bnp");
+    set_dCharacter_sprite(disp, "sprite/main_character.bmp");
     set_dCharacter_position(disp, 60, (640-200-80));
-    set_dPlatform_sprite(disp, "sprite/main_character.bnp");
+    set_dPlatform_sprite(disp, "sprite/floor.bmp");
     set_dPlatform_position(disp, 0, (640-200));
-    SDL_BlitSurface(disp->character->image, NULL, disp->screen, disp->character->position);
+    display_all(disp);
     SDL_Flip(disp->screen);
 
     while(continuer)
