@@ -30,6 +30,7 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-O2" />
 			<Add option="-Wall" />
 			<Add directory="C:/Program Files (x86)/CodeBlocks/SDL-1.2.15/include" />
 			<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/include" />

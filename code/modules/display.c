@@ -125,9 +125,9 @@ void set_dCharacter_sprite (display *disp, char *path)
     set_sImage(get_dCharacter(disp), path);
 }
 
-void set_dCharacter_position (display *disp, int x, int y)
+void set_dCharacter_position (display *disp, coordinate* position)
 {
-    set_sPosition(get_dCharacter(disp), x, y);
+    set_sPosition(get_dCharacter(disp), position->x, position->y);
 }
 
 void set_dPlatform_sprite (display *disp, char *path)
@@ -135,9 +135,9 @@ void set_dPlatform_sprite (display *disp, char *path)
     set_sImage(get_dPlatform(disp), path);
 }
 
-void set_dPlatform_position (display *disp, int x, int y)
+void set_dPlatform_position (display *disp, coordinate* position)
 {
-    set_sPosition(get_dPlatform(disp), x, y);
+    set_sPosition(get_dPlatform(disp), position->x, position->y);
 }
 
 void set_sImage (sprite *sp, char *path)

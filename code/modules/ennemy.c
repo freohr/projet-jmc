@@ -67,17 +67,17 @@ void free_ennemy(ennemy * enm)
 
 // Gets
 // Les fonctions en Get 
-coordinate get_ePosition(const ennemy* enm)
+coordinate* get_ePosition(const ennemy* enm)
 {
     return get_oPosition(&(enm->disposition));
 }
 
-coordinate get_eSpeed(const ennemy* enm)
+coordinate* get_eSpeed(const ennemy* enm)
 {
     return get_oSpeed(&(enm->disposition));
 }
 
-coordinate get_eHitbox(const ennemy* enm)
+coordinate* get_eHitbox(const ennemy* enm)
 {
     return get_oHitbox(&(enm->disposition));
 }

@@ -4,7 +4,7 @@
 
 void input_cMove(character* char1)
 {
-    coordinate speed;
+    coordinate* speed;
     state cState;
     SDL_Event input;
 
@@ -21,18 +21,18 @@ void input_cMove(character* char1)
                 {
                     case SDLK_LEFT:
                         if(cState == jump)
-                            set_cSpeed(char1, speed.x-1, speed.y);
+                            set_cSpeed(char1, speed->x-1, speed->y);
                         else
-                            set_cSpeed(char1, -1, speed.y);
+                            set_cSpeed(char1, -1, speed->y);
 
                     case SDLK_RIGHT:
                         if(cState == jump)
-                            set_cSpeed(char1, speed.x+1, speed.y);
+                            set_cSpeed(char1, speed->x+1, speed->y);
                         else
-                            set_cSpeed(char1, 1, speed.y);
+                            set_cSpeed(char1, 1, speed->y);
 
                     default:
-                       set_cSpeed(char1, 0, speed.y);
+                       set_cSpeed(char1, 0, speed->y);
                 }
 
         }

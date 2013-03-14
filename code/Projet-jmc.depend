@@ -1,11 +1,13 @@
 # depslib dependency file v1.0
-1363092510 source:e:\users\freohr\documents\github\projet-jmc\code\main.c
+1363260950 source:e:\users\freohr\documents\github\projet-jmc\code\main.c
 	<stdio.h>
 	<stdlib.h>
 	<SDL/SDL.h>
 	"modules/display.h"
 	"modules/engine.h"
 	"modules/plateform.h"
+	"modules/main_char.h"
+	"modules/input.h"
 
 1341006776 c:\program files (x86)\codeblocks\mingw\include\stdio.h
 	<_mingw.h>
@@ -244,15 +246,16 @@
 	"begin_code.h"
 	"close_code.h"
 
-1363092518 e:\users\freohr\documents\github\projet-jmc\code\modules\display.h
+1363259474 e:\users\freohr\documents\github\projet-jmc\code\modules\display.h
 	<stdio.h>
 	<stdlib.h>
 	<SDL/SDL.h>
+	"struct.h"
 
 1363092053 e:\users\freohr\documents\github\projet-jmc\code\modules\engine.h
 	"object.h"
 
-1361979299 e:\users\freohr\documents\github\projet-jmc\code\modules\object.h
+1363260219 e:\users\freohr\documents\github\projet-jmc\code\modules\object.h
 	<stdio.h>
 	<stdlib.h>
 	"struct.h"
@@ -261,20 +264,20 @@
 	<stdlib.h>
 	<stdio.h>
 
-1361979299 e:\users\freohr\documents\github\projet-jmc\code\modules\plateform.h
+1363259925 e:\users\freohr\documents\github\projet-jmc\code\modules\plateform.h
 	"struct.h"
 	"object.h"
 
-1363092563 source:e:\users\freohr\documents\github\projet-jmc\code\modules\display.c
+1363259422 source:e:\users\freohr\documents\github\projet-jmc\code\modules\display.c
 	"display.h"
 
-1361979299 source:e:\users\freohr\documents\github\projet-jmc\code\modules\engine.c
+1363260083 source:e:\users\freohr\documents\github\projet-jmc\code\modules\engine.c
 	"engine.h"
 
-1363093013 source:e:\users\freohr\documents\github\projet-jmc\code\modules\ennemy.c
+1363260112 source:e:\users\freohr\documents\github\projet-jmc\code\modules\ennemy.c
 	"ennemy.h"
 
-1363093028 e:\users\freohr\documents\github\projet-jmc\code\modules\ennemy.h
+1363260111 e:\users\freohr\documents\github\projet-jmc\code\modules\ennemy.h
 	<stdlib.h>
 	<stdio.h>
 	"object.h"
@@ -298,18 +301,18 @@
 	<SDL/SDL.h>
 	"main_char.h"
 
-1363255605 e:\users\freohr\documents\github\projet-jmc\code\modules\main_char.h
+1363260275 e:\users\freohr\documents\github\projet-jmc\code\modules\main_char.h
 	<stdio.h>
 	<stdlib.h>
 	"object.h"
 	"weapon.h"
 	"struct.h"
 
-1363254727 source:e:\users\freohr\documents\github\projet-jmc\code\modules\input.c
+1363260972 source:e:\users\freohr\documents\github\projet-jmc\code\modules\input.c
 	"input.h"
 	"main_char.h"
 
-1363255606 source:e:\users\freohr\documents\github\projet-jmc\code\modules\main_char.c
+1363260261 source:e:\users\freohr\documents\github\projet-jmc\code\modules\main_char.c
 	"main_char.h"
 	<math.h>
 
@@ -324,10 +327,10 @@
 	<stdlib.h>
 	<SDL/SDL.h>
 
-1361979299 source:e:\users\freohr\documents\github\projet-jmc\code\modules\object.c
+1363260207 source:e:\users\freohr\documents\github\projet-jmc\code\modules\object.c
 	"object.h"
 
-1361979299 source:e:\users\freohr\documents\github\projet-jmc\code\modules\plateform.c
+1363259925 source:e:\users\freohr\documents\github\projet-jmc\code\modules\plateform.c
 	"plateform.h"
 
 1361979299 source:e:\users\freohr\documents\github\projet-jmc\code\modules\weapon.c

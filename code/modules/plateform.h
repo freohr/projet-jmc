@@ -15,9 +15,9 @@ void free_plateform(plateform* pf);
 //Get functions
 
 int get_pID(const plateform * pf);
-coordinate get_pPosition(const plateform *pf);
-coordinate get_pSpeed(const plateform *pf);
-coordinate get_pHitbox(const plateform *pf);
+coordinate* get_pPosition(const plateform *pf);
+coordinate* get_pSpeed(const plateform *pf);
+coordinate* get_pHitbox(const plateform *pf);
 
 //Set functions
 

@@ -35,17 +35,17 @@ int get_pID(const plateform * pf)
     return get_oID(&(pf->disposition));
 }
 
-coordinate get_pPosition(const plateform *pf)
+coordinate* get_pPosition(const plateform *pf)
 {
     return get_oPosition(&(pf->disposition));
 }
 
-coordinate get_pSpeed(const plateform *pf)
+coordinate*  get_pSpeed(const plateform *pf)
 {
     return get_oSpeed(&(pf->disposition));
 }
 
-coordinate get_pHitbox(const plateform *pf)
+coordinate*  get_pHitbox(const plateform *pf)
 {
     return get_oHitbox(&(pf->disposition));
 }

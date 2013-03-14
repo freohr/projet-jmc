@@ -25,9 +25,9 @@ void free_mainChar(character* char1);
 
 //Get Functions (récupere les informations)
 
-coordinate get_cPosition(const character* char1);
-coordinate get_cSpeed(const character* char1);
-coordinate get_cHitbox(const character* char1);
+coordinate* get_cPosition(character* char1);
+coordinate* get_cSpeed(character* char1);
+coordinate* get_cHitbox(character* char1);
 object* get_cObject(const character* char1); //pour la fonction de mouvement (pour avoir une seule fonction, et éviter les cast sur des (void*)
 
 int get_cHP(const character* char1);

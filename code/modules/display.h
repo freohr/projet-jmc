@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <SDL/SDL.h>
 
+#include "struct.h"
+
 struct sSprite
 {
     SDL_Surface *image;
@@ -65,7 +67,7 @@ void set_dCharacter_sprite (display *disp, char *path);
                     - path contient le chemin relatif de l'image
    postcondition : la taille du sprite est contenue dans SDL_Surface */
 
-void set_dCharacter_position (display *disp, int x, int y);
+void set_dCharacter_position (display *disp, coordinate* position);
 /* précondition :   -disp initialisé
                     - x et y contiennent la position du personnage */
 
@@ -73,7 +75,7 @@ void set_dPlatform_sprite (display *disp, char *path);
 /* précondition :   - disp initialisé
                     - path contient le chemin relatif de l'image */
 
-void set_dPlatform_position (display *disp, int x, int y);
+void set_dPlatform_position (display *disp, coordinate* position);
 /* précondition :   - disp initialisé
                     - x et y contiennent la position de la plateforme
    postcondition : la taille du sprite est contenue dans SDL_Surface */

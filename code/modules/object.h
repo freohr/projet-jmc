@@ -25,9 +25,9 @@ void free_object(object* obj1);
 // TODO : rajouter sprite et direction
 
 int get_oID(const object* obj1);
-coordinate get_oPosition(const object* obj1);
-coordinate get_oSpeed(const object* obj1);
-coordinate get_oHitbox(const object* obj1);
+coordinate* get_oPosition(object* obj1);
+coordinate* get_oSpeed(object* obj1);
+coordinate* get_oHitbox(object* obj1);
 
 // Set Functions
 // TODO : rajouter sprite et direction
