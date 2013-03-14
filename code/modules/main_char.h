@@ -52,7 +52,7 @@ void set_cState(character * cha,state state1); // modifier l'état du personnage
 // other
 void move_char(character* cha); // déplace le personnage; appelle getposition get speed setposition
 
-void cjump(character * cha); // A FAIRE ET UTILISE LA SDL
+void cJump(character* char1, int* jumpSpeed); // A FAIRE ET UTILISE LA SDL
 void ccrouch(character * cha); // A FAIRE ET UTILISE LA SDL
 void ccover(character * cha); // A FAIRE ET UTILISE LA SDL
 void cclimb(character * cha);  /* ici la direction sera haut où bas */

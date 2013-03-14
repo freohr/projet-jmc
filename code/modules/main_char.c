@@ -102,4 +102,19 @@ void move_char(character* char1)
     speed = get_cSpeed(char1);
 
     set_cPosition(char1, movement->x+speed->x, movement->y+speed->y);
+    if(get_cState(char1) != jump)
+        set_cSpeed(char1, 0, speed->y);
 }
+
+void cJump(character* char1, int* jumpSpeed)
+{
+    coordinate* speed;
+    speed = get_cSpeed(char1);
+
+    set_cSpeed(char1, speed->x, speed->y + *jumpSpeed);
+    if(*jumpSpeed <= -10)
+       set_cState(char1, normal);
+    else
+        *jumpSpeed -= 1;
+}
+

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1363260950 source:e:\users\freohr\documents\github\projet-jmc\code\main.c
+1363273961 source:e:\users\freohr\documents\github\projet-jmc\code\main.c
 	<stdio.h>
 	<stdlib.h>
 	<SDL/SDL.h>
@@ -301,7 +301,7 @@
 	<SDL/SDL.h>
 	"main_char.h"
 
-1363260275 e:\users\freohr\documents\github\projet-jmc\code\modules\main_char.h
+1363273981 e:\users\freohr\documents\github\projet-jmc\code\modules\main_char.h
 	<stdio.h>
 	<stdlib.h>
 	"object.h"
@@ -312,7 +312,7 @@
 	"input.h"
 	"main_char.h"
 
-1363260261 source:e:\users\freohr\documents\github\projet-jmc\code\modules\main_char.c
+1363274733 source:e:\users\freohr\documents\github\projet-jmc\code\modules\main_char.c
 	"main_char.h"
 	<math.h>
 
