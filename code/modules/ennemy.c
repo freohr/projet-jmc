@@ -38,7 +38,8 @@ ennemy* init_ennemy() // LE MEC N'A PAS D'ARME
 {
     ennemy* enn;
     enn=malloc(sizeof(ennemy));
-    enn->ID=0;
+    enn->disposition = init_object();
+
     enn->hp=100;
     enn->alive=1; // l'ennemi est par défaut en vie
     enn->nb_grenades=0;
@@ -69,22 +70,22 @@ void free_ennemy(ennemy * enm)
 // Les fonctions en Get 
 coordinate* get_ePosition(const ennemy* enm)
 {
-    return get_oPosition(&(enm->disposition));
+    return get_oPosition(enm->disposition);
 }
 
 coordinate* get_eSpeed(const ennemy* enm)
 {
-    return get_oSpeed(&(enm->disposition));
+    return get_oSpeed(enm->disposition);
 }
 
 coordinate* get_eHitbox(const ennemy* enm)
 {
-    return get_oHitbox(&(enm->disposition));
+    return get_oHitbox(enm->disposition);
 }
 
 object* get_eObject(ennemy* enm)
 {
-    return &(enm->disposition);
+    return enm->disposition;
 }
 
 int get_eHP(ennemy* enm) //retourne le nombre d'hp du mob

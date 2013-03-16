@@ -35,6 +35,11 @@ int get_oID(const object* obj1)
     return obj1->ID;
 }
 
+int get_oType(object* obj1)
+{
+    return obj1->type;
+}
+
 coordinate* get_oPosition(object* obj1)
 {
     return &(obj1->position);
@@ -55,6 +60,11 @@ coordinate* get_oHitbox(object* obj1)
 void set_oID(object* obj1, int id)
 {
     obj1->ID = id;
+}
+
+void set_oType(object* obj1, int IDtype)
+{
+    obj1->type = IDtype;
 }
 
 void set_oPosition(object* obj1, int x, int y)

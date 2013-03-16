@@ -21,7 +21,7 @@ typedef enum eAction action;
 struct sEnnemy
 {
 	int ID;
-	object disposition;
+	object* disposition;
 	int hp;
 	int alive;
 	//gear : table of weapon (voir weapon) voir ligne suivante improvisation

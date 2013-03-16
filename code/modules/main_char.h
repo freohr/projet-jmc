@@ -9,7 +9,7 @@
 
 struct sCharacter
 {
-    object disposition;
+    object* disposition;
     int hp;
     int alive; // etat mort ou vif si en vie = 1 si mort = 0
     // weapon* gear; //A décommenter une fois le module weapons.c écrit
@@ -20,7 +20,7 @@ struct sCharacter
 typedef struct sCharacter character;
 
 // Initialisation and Destruction
-character * init_mainChar();
+character* init_mainChar();
 void free_mainChar(character* char1);
 
 //Get Functions (récupere les informations)
@@ -28,7 +28,7 @@ void free_mainChar(character* char1);
 coordinate* get_cPosition(character* char1);
 coordinate* get_cSpeed(character* char1);
 coordinate* get_cHitbox(character* char1);
-object* get_cObject(const character* char1); //pour la fonction de mouvement (pour avoir une seule fonction, et éviter les cast sur des (void*)
+object* get_cObject(character* char1); //pour la fonction de mouvement (pour avoir une seule fonction, et éviter les cast sur des (void*)
 
 int get_cHP(const character* char1);
 int get_cAlive (const character* cha ); // etat mort ou vif si en vie = 1 si mort = 0
@@ -50,9 +50,10 @@ void set_cGrenades(character * cha,int nb_grenades); //modifier le nombre de gre
 void set_cState(character * cha,state state1); // modifier l'état du personnage
 
 // other
-void move_char(character* cha); // déplace le personnage; appelle getposition get speed setposition
+void move_char(character* cha); // done
 
-void cJump(character* char1, int* jumpSpeed); // A FAIRE ET UTILISE LA SDL
+void cJump(character* char1); //done
+
 void ccrouch(character * cha); // A FAIRE ET UTILISE LA SDL
 void ccover(character * cha); // A FAIRE ET UTILISE LA SDL
 void cclimb(character * cha);  /* ici la direction sera haut où bas */

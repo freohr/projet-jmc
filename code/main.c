@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
     SDL_Event event;
     int repeat;
-  /*  Uint8 *keystate;*/
+    Uint8 *keystate;
 
     disp = initialize_display_module();
     initialize_SDL();
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
     coordinate* speed;
     state cState;
-    int* jumpSpeed;
+    int jumpSpeed;
 
     //Init Plateforme
     plateform* floor;
@@ -45,13 +45,14 @@ int main(int argc, char *argv[])
 
     SDL_BlitSurface(disp->platform->image, NULL, disp->screen, disp->platform->position);
 
-
-    speed = get_cSpeed(main_char);
-    cState = get_cState(main_char);
-
     while(continuer)
     {
+        speed = get_cSpeed(main_char);
+        cState = get_cState(main_char);
+
         SDL_PollEvent(&event);
+        keystate = SDL_GetKeyState(NULL);
+
         switch(event.type)
         {
             case SDL_QUIT:
@@ -69,34 +70,43 @@ int main(int argc, char *argv[])
                         if(cState == jump)
                             set_cSpeed(main_char, speed->x-1, speed->y);
                         else
-                            set_cSpeed(main_char, -1, speed->y);
+                            set_cSpeed(main_char, -2, speed->y);
                         break;
 
                     case SDLK_RIGHT:
                         if(cState == jump)
                             set_cSpeed(main_char, speed->x+1, speed->y);
                         else
-                            set_cSpeed(main_char, 1, speed->y);
+                            set_cSpeed(main_char, 2, speed->y);
                         break;
 
                     case SDLK_SPACE:
                         if(cState != jump)
                         {
                             set_cState(main_char, jump);
-                            *jumpSpeed = 10;
+                            if(keystate[SDLK_RIGHT])
+                                set_cSpeed(main_char, +2, -12);
+                            else if (keystate[SDLK_LEFT])
+                                set_cSpeed(main_char, -2, -12);
+                            else
+                                set_cSpeed(main_char, 0, -12);
                         }
                         break;
                 }
         }
 
-        if(get_cState(main_char) == jump)
-            cJump(main_char, jumpSpeed);
+       if(get_cState(main_char) == jump)
+            cJump(main_char);
+
+      //  collision(get_cObject(main_char), get_pObject(floor));
 
         move_char(main_char);
 
         set_dCharacter_position(disp, get_cPosition(main_char));
 
         display_all(disp);
+
+        SDL_Delay(3);
     }
 
     free_display_module(disp);

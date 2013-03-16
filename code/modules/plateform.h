@@ -3,7 +3,7 @@
 
 struct sPlateform
 {
-    object disposition;
+    object* disposition;
 };
 typedef struct sPlateform plateform;
 
@@ -14,10 +14,11 @@ void free_plateform(plateform* pf);
 
 //Get functions
 
-int get_pID(const plateform * pf);
-coordinate* get_pPosition(const plateform *pf);
-coordinate* get_pSpeed(const plateform *pf);
-coordinate* get_pHitbox(const plateform *pf);
+int get_pID(plateform * pf);
+coordinate* get_pPosition(plateform *pf);
+coordinate* get_pSpeed(plateform *pf);
+coordinate* get_pHitbox(plateform *pf);
+object* get_pObject(plateform *pf);
 
 //Set functions
 
