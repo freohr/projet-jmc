@@ -98,7 +98,7 @@ int main(int argc, char *argv[])
        if(get_cState(main_char) == jump)
             cJump(main_char);
 
-      //  collision(get_cObject(main_char), get_pObject(floor));
+       /* collision(get_cObject(main_char), get_pObject(floor)); */
 
         move_char(main_char);
 

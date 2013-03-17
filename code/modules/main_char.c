@@ -79,7 +79,7 @@ character* init_mainChar()//  initialisation et libération
     char1->disposition = init_object();
 
     set_oPosition(char1->disposition, 60, (640-200-80)); // initialise la position du personnage a x=0, y=0
-    set_oSpeed(char1->disposition, 0, 1); // initialise la vitesse du personnage a x=0, y=0 (vitesse nulle)
+    set_oSpeed(char1->disposition, 0, 0); // initialise la vitesse du personnage a x=0, y=0 (vitesse nulle)
     set_oHitbox(char1->disposition, 60, 80); // itinialise la hit box
 
     set_cHP(char1,100);

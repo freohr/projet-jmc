@@ -27,8 +27,8 @@ int test_collision(object* obj1, object* obj2)
 
 void collision(object* obj1, object* obj2)
 {
-    typeID type_obj1;
-    typeID type_obj2;
+    IDtype type_obj1;
+    IDtype type_obj2;
     int coll;
 
     type_obj1 = get_oType(obj1);
