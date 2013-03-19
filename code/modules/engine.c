@@ -1,6 +1,7 @@
 #include "engine.h"
 
 int collision(const object* obj1, const object* obj2)
+//renvoie un code dictant le type de collision , a améliorer plus tard pour gérer s'il y a plusieurs collision en même temps!
 {
     coordinate* size1;
     coordinate* position1;
@@ -23,3 +24,4 @@ int collision(const object* obj1, const object* obj2)
     else
         return 0;
 }
+

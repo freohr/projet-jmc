@@ -27,3 +27,5 @@ void move_object(object* obj1, int direction);
 */
 
 #endif // _ENGINE_H_
+
+int saut (character * char1, object * obj)
