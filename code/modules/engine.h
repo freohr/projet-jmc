@@ -22,10 +22,10 @@ int collision(const object* obj1, const object* obj2);
 //Movement
 
 void move_object(object* obj1, int direction);
-/*  précond : obj1 est initialisé, et la pointeur est récuperé avec un get.
+/*  précond : obj1 est initialisé, et le pointeur est récuperé avec un get.
     postcond : le champ object.speed est modifié
 */
 
 #endif // _ENGINE_H_
 
-int saut (character * char1, object * obj)
+int saut (character * char1, object * obj);
